@@ -93,7 +93,11 @@ class App {
 	}
 	
 	function contentWD() {
-		echo '/content'.$this->request->path;
+		$result = '/content'.$this->request->path;
+		if (strrpos($this->request->path, '/') !== strlen($this->request->path) - 1) {
+			$result .= '/';
+		}
+		echo $result;
 	}
 	
 }
