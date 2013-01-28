@@ -6,6 +6,7 @@ ob_start();
 ?>
 	<header class="jumbotron subhead">
 		<div class="container">
+			<img src="<?php app()->contentWD(); ?>cheese.svg" style="width:200px; float:right;">
 			<h1>Session 1</h1>
 			<p class="lead">Computers Do What You Tell Them To Do</p>
 		</div>
@@ -18,12 +19,17 @@ ob_start();
 			</div>
 			<div class="span9 session-content">
 				<section id="intro" class="first">
-					<p>
+					<blockquote class="pull-right first">
+						<p>At least <a href="http://hubot.github.com/">Hubot</a> has an existential purpose. <a href="http://en.wikipedia.org/wiki/Karel_the_robot">Karel</a>'s only aim was to make me miserable.</p>
+						<small>
+							A CS106A veteran.
+						</small>
+					</blockquote>
+					<p style="clear:both;">
 						Our first lesson is surprisingly difficult to accept! They are frustrating, mysterious, and clearly obsessed with foiling all of our plans, but actually computers do only and precisely what you (or rather, you plus the engineers who designed them) tell them to do. To get our feet wet we start with a little graphical programming and are introduced to our Javascript-based version of the Karel programming environment.
 					</p>
-					
 				</section>
-				<section id="recipes">
+				<section id="recipes" style="clear:both;">
 					<h1>Recipes</h1>
 					<p>
 						Computers follow instructions as if they were following a recipe. That is, they read the first instruction, follow it, then read the next instruction, and follow it. The good news is that they're really good at following instructions in a precise manner. The bad news is that they're really good at following instructions in <em>only</em> a precise manner. They have no notion of the larger picture. You can tell them you're writing a recipe for pizza, but they have no idea what pizza is, so they have no way to tell if they're doing it right.
@@ -86,7 +92,7 @@ sliceCheese();</div>
 				<section id="recipes-within-recipes">
 					<h1>Recipes Within Recipes</h1>
 					<p>
-						Now of course when we say "make" a pizza here what we mean is "draw" a pizza. But the computer, it turns out, doesn't even know how to do that. What it's actually doing is just is drawing ovals and rectangles of various colors. The command <code>spreadSauce();</code> doesn't mean anything inherently to the computer. What's going on is that you're not talking directly to the computer. These commands are actually recipes in and of themselves. Let's take a look at the recipe for <code>spreadSauce()</code>.
+						Now of course when we say "make" a pizza here what we mean is "draw" a pizza. But the computer, it turns out, doesn't even know how to do that. What it's actually doing is just is drawing ovals and rectangles of various colors. The command <code>spreadSauce();</code> doesn't mean anything inherently to the computer. What's going on is that you're not talking directly to the computer. <em>These commands are actually recipes in and of themselves.</em> Let's take a look at the recipe for <code>spreadSauce()</code>.
 					</p>
 					<div class="row live-example">
 						<div class="code-container" style="height:100px; width:100%;">
@@ -152,7 +158,147 @@ sliceCheese();</div>
 				</section><!-- /recipes-within-recipes -->
 				<section id="meet-karel">
 					<h1>Meet Karel</h1>
-				</section>
+					<img style="float:right; margin-right:200px;" src="<?php app()->contentWD(); ?>gir.png">
+					<blockquote>
+						<p>
+							<em>(Read in the voice of the movie trailer guy.)</em><br>
+							In a world&hellip; <br>
+							Where algorithms run rampant&hellip; <br>
+							Where walls keep you from your beepers&hellip; <br>
+							One robot&hellip; <br>
+							Is <strong>OUT. FOR. CHEESE.</strong>
+						</p>
+					</blockquote>
+					<p>
+						This is Karel. Or at least, our version of Karel. And this is his story.
+					</p>
+					<blockquote style="clear:both;">
+						<p>
+							In the 1970s, a Stanford graduate student named Rich Pattis decided that it would be easier to teach the fundamentals of programming if students could somehow learn the basic ideas in a simple environment free from the complexities that characterize most programming languages. Drawing inspiration from the success of Seymour Papert's LOGO project at MIT, Rich designed an introductory programming environment in which students teach a robot to solve simple problems. <a href="http://en.wikipedia.org/wiki/Karel_the_robot">That robot was named Karel</a>, after the Czech playwright <a href="http://en.wikipedia.org/wiki/Karel_Capek">Karel Capek</a>, whose 1923 play R.U.R. (Rossum's Universal Robots) gave the word <em>robot</em> to the English language.
+						</p>
+						<small>
+							<a href="http://www.stanford.edu/class/cs106a/handouts/karel-the-robot-learns-java.pdf">Karel the Robot Learns Java</a>, [PDF], from Stanford University's <a href="http://www.stanford.edu/class/cs106a/">CS106a</a> Online Course Handouts.
+						</small>
+					</blockquote>
+					<p>
+						Karel the Robot has a long history of teaching folks to program. We're going to leverage this, and specifically borrow aspects of the approach taken in Stanford University's CS106A course (one of the first programming courses taken by yours truly). <a href="http://www.stanford.edu/class/cs106a/">The materials for that course are largely available for free online</a> and you are encouraged to check them out. <em>This course</em> is of course a much smaller commitment than the quarter-long Stanford introductory CS course, and will avoid much of the more advanced material covered in CS106A. We will also be covering web-specific topics once we learn some of the basics of programming.
+					</p>
+					<p>
+						The motivation for an approach like this is that programming is not so much about any specific language. It's a <em>way of thinking about problems</em> and a toolkit of patterns, methods, and strategies for solving them. The principle that binds all kinds of programming together is that computers are neurotically precise, and fantasically dumb.
+					</p>
+					<p>
+						The strength of the Karel environment in this respect is its simplicity. Karel lives in a world with "streets" and "avenues"&mdash;a grid. The streets are numbered starting at (1, 1) at the lower left of the world, and move up from there. The world will have different dimensions at different times.
+					</p>
+					<figure>
+						<img src="<?php app()->contentWD();?>karel-grid.png">
+					</figure>
+					<p>
+						Karel walks these streets&hellip;these heartless streets of code. Karel's a problem-solver. You gotta problem, you come see Karel. He don't need much, but he does need you. You are actually the brains behind Karel's genius. He may be cute, but Karel's just a computer, and remember what we learned about computers.
+					</p>
+					<p>
+						Using a very small set of commands, you'll be helping Karel in his tasks.
+					</p>
+					<div class="row live-exercise" id="karel-1">
+						<div class="span4">
+							<h4>Goal</h4>
+							<p>
+								Using the commands <code>move();</code>, and <code>turnLeft();</code> navigate Karel to the blue dot. Try to do it all in one click of the Run button.
+							</p>
+							<div class="code-container" style="height:200px; width:100%;">
+								<div class="pretty-code karel-input" id="karel-1-input" style="height:200px; width:100%;"></div>
+							</div>
+							<button class="karel-run">Run!</button>
+							<button class="karel-reset">Reset</button>
+						</div>
+						<div class="span5">
+							<div class="karel-viewport"></div>
+						</div>
+						<style type="text/css" media="screen">
+							#karel-1 .karel-viewport {
+								display:block;
+								margin:0 auto;
+								width:400px;
+								height:200px;
+								margin-top:100px;
+							}
+						</style>
+					</div>
+					<p>
+						In addition to streets and avenues on which Karel can travel, he may on occasion encounter a wall. Walls are impassible.
+					</p>
+					<p>
+						By the way, fun fact: our Karel is a second-cousin twice-removed's former landlord's previous tenant to <a href="http://en.wikipedia.org/wiki/List_of_Invader_Zim_characters#GIR">GIR</a>.
+					</p>
+
+					<div class="row live-exercise" id="karel-2" style="clear:both;">
+						<div class="span4">
+							<h4>Goal</h4>
+							<p>
+								Using the comands <code>move();</code> and <code>turnLeft();</code>, move Karel from the lower-left to the upper-right.
+							</p>
+							<div class="code-container" style="height:200px; width:100%;">
+								<div class="pretty-code karel-input" id="karel-2-input" style="height:200px; width:100%;"></div>
+							</div>
+							<button class="karel-run">Run!</button>
+							<button class="karel-reset">Reset</button>
+						</div>
+						<div class="span5">
+							<div class="karel-viewport"></div>
+						</div>
+						<style type="text/css" media="screen">
+							#karel-2 .karel-viewport {
+								display:block;
+								margin:0 auto;
+								width:300px;
+								height:300px;
+							}
+						</style>
+					</div>
+					<p>
+						What about this problem was more difficult? How did you solve it?
+					</p>
+					<div class="answer-container">
+						<p>
+							Karel has no "turnRight" command but to reach the corner, he needed to be able to turn right. Luckily, turning left three times is equivalent to turning right. You <em>cannot</em> keep this robot down.
+						</p>
+					</div>
+					<p>
+						Take note. When you try to walk through a wall, the program will raise an <dfn>error condition</dfn>. This means that the program can no longer carry on its instructions and so it stops running. If this happened to you while solving this problem, congratulations! You just wrote the first of the many, many <dfn>bugs</dfn> you will create in your career!
+					</p>
+					<p>
+						The other thing in Karel's world are what are traditionally called <em>beepers</em>. I, however, prefer cheese.
+					</p>
+					<figure>
+						<img src="<?php app()->contentWD(); ?>cheese.svg" style="width:300px; margin:0 auto; display:block;">
+					</figure>
+					<p>
+						Karel does, too. Many of Karel's tasks involve picking up or putting down cheese. Don't ask why this is so important; it just is.
+					</p>
+					<div class="row live-exercise" id="karel-3">
+						<div class="span4">
+							<h4>Goal</h4>
+							<p>
+								Using the comands <code>move();</code>, <code>pickUpCheese();</code>, and <code>putDownCheese();</code>, have Karel pick up the cheese in (2, 1) and deposit it in (3, 1).
+							</p>
+							<div class="code-container" style="height:200px; width:100%;">
+								<div class="pretty-code karel-input" id="karel-3-input" style="height:200px; width:100%;"></div>
+							</div>
+							<button class="karel-run">Run!</button>
+							<button class="karel-reset">Reset</button>
+						</div>
+						<div class="span5">
+							<div class="karel-viewport"></div>
+						</div>
+						<style type="text/css" media="screen">
+							#karel-3 .karel-viewport {
+								display:block;
+								margin:0 auto;
+								width:300px;
+								height:300px;
+							}
+						</style>
+					</div>
+				</section><!-- /meet-karel -->
 			</div>
 		</div>
 	</div>
@@ -181,7 +327,7 @@ ob_start();
 			$(this).toggleClass('revealed').children().slideToggle();
 		});
 		
-		// bootstrap's affix kinda sucks
+		// cause bootstrap's affix kinda sucks
 		var sidebarOrigin = $('#sidebar-nav').offset().top;
 		$(window).scroll(function() {
 			var $window = $(window);
@@ -205,95 +351,24 @@ ob_start();
 			}
 		});
 	});
-	$(document).ready(function() {
-		var runExample = function() {
-			var editor = $('#exercise-1-input').data('editor');
-			if (editor) {
-				var content = editor.getValue();
-				var ex = function(processing) {
-					var errorTriggered = false;
-					var center = {
-						x: 100,
-						y: 100
-					};
-					var pepperoniLocs = [];
-					var generatePepperoniLocs = function() {
-						for (var i = 0; i < processing.random(10, 20); i++) {
-							pepperoniLocs[i] = {
-								x: center.x + processing.random(-60, 60),
-								y: center.y + processing.random(-60, 60)
-							};
-						}
-					};
-					var cheeseLocs = [];
-					var generateCheeseLocs = function() {
-						for (var i = 0; i < processing.random(50, 80); i++) {
-							cheeseLocs[i] = {
-								x: center.x + processing.random(-55, 55),
-								y: center.y + processing.random(-55, 55),
-								r: processing.random(360) * (180 / processing.PI)
-							}
-						}
-					};
-					var makeCrust = function() {
-						processing.fill(220, 200, 180);
-						processing.ellipse(center.x, center.y, 180, 180);
-					};
-					var spreadSauce = function() {
-						processing.fill(200, 120, 100);
-						processing.ellipse(center.x, center.y, 160, 160);
-					};
-					var slicePepperoni = function() {
-						generatePepperoniLocs();
-						processing.fill(240, 120, 100);
-						for (var i = 0; i < pepperoniLocs.length; i++) {
-							processing.ellipse(
-								pepperoniLocs[i].x,
-								pepperoniLocs[i].y,
-								10, 10
-							);
-						}
-					};
-					
-					var sliceCheese = function() {
-						generateCheeseLocs();
-						processing.fill(240, 240, 220);
-						for (var i = 0; i < cheeseLocs.length; i++) {
-							processing.pushMatrix();
-							processing.translate(cheeseLocs[i].x, cheeseLocs[i].y);
-							processing.rotate(cheeseLocs[i].r);
-							processing.rect(0, 0, 5, 13);
-							processing.popMatrix();
-						}
-					};
-
-					processing.setup = function() {
-						processing.size(200, 200);
-						processing.noLoop();
-					};
-					processing.draw = function() {
-						processing.background(230);
-						try {
-							if (!errorTriggered) {
-								eval(content);
-							}
-						}
-						catch (e) {
-							errorTriggered = true;
-							alert('Oops! The computer couldn\'t understand your recipe.');
-						}
-					};
-				};
-				$('#exercise-1-output').replaceWith('<canvas id="exercise-1-output">');
-				var $canvas = $('#exercise-1-output');
-				var processingInstance = new Processing($canvas.get(0), ex);
-			}
-			return false;
-		};
-		$('button#exercise-1-eval').click(runExample);
-		runExample();
-	});
 </script>
+<script type="text/javascript" charset="utf-8" src="<?php app()->contentWD(); ?>exercise-1.js"></script>
+
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/dependencies/raphael-1.3.2.js"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/classes/Romano.js"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/classes/Sprite.js"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/classes/Surface.js"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/classes/Renderer.js"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/classes/RaphaelSurface.js"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/classes/RaphaelRenderer.js"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/classes/Viewport.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="<?php echo STATIC_URL; ?>js/karel/karel.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo STATIC_URL; ?>js/karel/classes/Karel.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo STATIC_URL; ?>js/karel/classes/Cheese.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="<?php app()->contentWD(); ?>exercise-2.js"></script>
+
 <?php
 app()->appendTo('HTMLBodyTail', ob_get_clean());
 ?>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body>
+	<h1>Crystal-<a href="http://en.wikipedia.org/wiki/Karel_Čapek">Karel</a></h1>
+	<ul id="crystal-stats">
+		<li>Crystals on board: <span id="crystals-on-board"></span></li>
+		<li>Crystals in pouch: <span id="crystals-in-pouch"></span></li>
+	</ul>
+	<div id="viewport-container"></div>
+	<div id="console">
+		<div id="output">&nbsp;</div>
+		<textarea id="console-text" rows="15" cols="40"></textarea>
+		<input id="toggle-animate" type="checkbox" checked="checked" value="animate"/>
+		<label for="toggle-animate" id="animate-info">Attempt to animate.</label>
+		<input id="reset" type="button" value="Reset"/>
+		<label for="reset">Reset</label>
+
+		<input id="run-text" type="submit" value="Go!"><div id="go-info"/> (or shift-return)</div>
+	</div>
+	<div id="reference">
+		<h3>Commands (karel API):</h3>
+		<dl>
+			<dt><code>karel.moveForward();</code></dt>
+			<dd>Move karel forward by one step.</dd>
+			<dt><code>karel.rotateClockwise();</code></dt>
+			<dd>Rotate karel 90&deg; clockwise.</dd>
+			<dt><code>app.log(<em>[expression]</em>);</code></dt>
+			<dd>Evaluate <code><em>[expression]</em></code> and print the result.</dd>
+		</dl>
+	</div>
+	
+	<script type="text/javascript" src="../romano/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="../romano/raphael.js"></script>
+	<script type="text/javascript" src="../romano/romano.js"></script>
+    <script type="text/javascript" src="karel.js"></script>
+    <script type="text/javascript" src="classes/Karel.js"></script>
+    <script type="text/javascript" src="classes/Crystal.js"></script>
+
+</body>
+</html>

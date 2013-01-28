@@ -12,7 +12,7 @@
 
 	
 	color:white;
-	padding:60px 30px 30px 30px;
+	padding:60px 30px 30px 20px;
 	margin-bottom:3em;
 	text-shadow:0px 1px 3px rgba(0 ,0 ,0 ,0.5);
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
@@ -35,6 +35,7 @@ section {
 		padding-top:0;
 	}
 }
+
 
 .container-tag {
 	position: absolute;
@@ -68,11 +69,9 @@ section {
 	overflow:hidden;
 	background:#eee;
 	border-radius:10px;
-	padding-top: 4em;
+	padding-top: 3em;
 	padding-bottom:1em;
 	position:relative;
-	margin-top:1em;
-	margin-bottom:1em;
 		
 	&:after {
 		content:"Exercise";
@@ -89,10 +88,10 @@ section {
 	position:relative;
 }
 	
-button.eval {
+button.eval, button.karel-run, button.karel-reset {
 	display:block;
 	float:right;
-	margin:1em 0 0;
+	margin:1em .5em 0 0;
 }
 
 
@@ -131,9 +130,22 @@ button.eval {
 		top:80px;
 	}
 }
-
+figure, .live-exercise, .live-example, blockquote {
+	margin-top: 3em;
+	margin-bottom: 3em;
+	
+	&.first {
+		margin-top:0;
+	}
+}
 figcaption {
 	font-size:12px;
 	font-style:italic;
 	text-align:center;
+}
+
+dfn {
+	background-color:#aaee99;
+	border-radius:2px;
+	padding:0 4px;
 }
