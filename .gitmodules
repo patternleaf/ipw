@@ -1,0 +1,3 @@
+[submodule "static/js/romano"]
+	path = static/js/romano
+	url = https://github.com/patternleaf/Romano.git
