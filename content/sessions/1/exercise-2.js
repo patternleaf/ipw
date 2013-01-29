@@ -25,7 +25,7 @@
 				{ x: 2, y: 1 },
 			],
 			walls: [],
-			goal: { x: 4, y: 4 }
+			goal: { x: 4, y: 1 }
 		});
 
 		var k4 = new KarelApp($('#karel-4'), {
