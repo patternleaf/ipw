@@ -143,18 +143,30 @@ sliceCheese();</div>
 						<li>Bake for 20 minutes</li>
 					</ol>
 					<p>
-						As well-adjusted humans, we can follow these instructions without much trouble. But let's think about what goes into spreading the sauce. In fact we might buy some pre-made sauce from the store. 
+						As well-adjusted humans, we can follow these instructions without much trouble. But let's think about what goes into spreading the sauce. <em>We</em> might just buy some pre-made sauce from the store. But a computer doesn't have a store. Step 2 <em>decomposes</em> into something ridiculous like:
 					</p>
-					<table>
-						<thead>
-							<th>Layers</th>
-						</thead>
-						<tbody>
-							<tr>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
+					<h4>2. Spread some sauce on the crust</h4>
+					<ol>
+						<li>Find tomatos</li>
+						<li>Pick tomatos</li>
+						<li>Find thing-that-crushes-tomatos</li>
+						<li>Find bowl</li>
+						<li>Carry tomatoes to thing-that-crushes-tomatos</li>
+						<li>Drop tomatoes into bowl</li>
+						<li>Crush tomatos</li>
+						<li>Find seasonings</li>
+						<li>Add seasonings to bowl</li>
+						<li>etc&hellip;</li>
+					</ol>
+					<p>
+						Though this is actually still quite generous. A computer of course wouldn't know what tomatos are, or what crushing is. So each of those steps would have to be further broken down. If it starts to sound a little silly, it is. Everything the computer does is a big-picture step which must be carried out by way of finer and finer details. We can say that all of those steps in spreading sauce are wrapped up in the "<em>abstraction</em>" of "spread the sauce on the crust". 
+					</p>
+					<p>
+						Programming, or software design in general is a matter of finding ways to communicate effectively with the computer, and (it turns out), with other humans. Luckily, the industry is old enough that a lot of the basic abstractions like "draw an ellipse" have already been <em>implemented</em> by someone, and they are now available for us to use as <dfn>high-level abstractions</dfn>.
+					</p>
+					<p>
+						In the next section, we'll use a few very basic "high-level abstractions" to &hellip; well, move cheese around.
+					</p>
 				</section><!-- /recipes-within-recipes -->
 				<section id="meet-karel">
 					<h1>Meet Karel</h1>
@@ -278,7 +290,7 @@ sliceCheese();</div>
 						<div class="span4">
 							<h4>Goal</h4>
 							<p>
-								Using the comands <code>move();</code>, <code>pickUpCheese();</code>, and <code>putDownCheese();</code>, have Karel pick up the cheese in (2, 1) and deposit it in (3, 1).
+								Using the comands <code>move();</code>, <code>pickUpCheese();</code>, and <code>putDownCheese();</code>, have Karel pick up the cheese in (2, 1) and deposit it in (3, 1). Then, have Karel move to the far lower-right corner (4, 1).
 							</p>
 							<div class="code-container" style="height:200px; width:100%;">
 								<div class="pretty-code karel-input" id="karel-3-input" style="height:200px; width:100%;"></div>
@@ -298,6 +310,42 @@ sliceCheese();</div>
 							}
 						</style>
 					</div>
+				</section>
+				<section id="cheese-collection">
+					<h1>Cheese Collection</h1>
+					<p>
+						A slightly cheesier exercise. At the end, the world should look like this:
+					</p>
+					<figure>
+						<img src="<?php app()->contentWD();?>cheese-end.png" style="width:300px; margin:0 auto; display:block;">
+					</figure>
+					<div class="row live-exercise" id="karel-4">
+						<div class="span4">
+							<h4>Goal</h4>
+							<p>
+								Using the comands <code>move();</code>, <code>turnLeft();</code>, <code>pickUpCheese();</code>, and <code>putDownCheese();</code>, have Karel pick up all the cheese in the world and deposit it in the notch (4, 1). Then, have Karel move to the blue dot.
+							</p>
+							<div class="code-container" style="height:200px; width:100%;">
+								<div class="pretty-code karel-input" id="karel-4-input" style="height:200px; width:100%;"></div>
+							</div>
+							<button class="karel-run">Run!</button>
+							<button class="karel-reset">Reset</button>
+						</div>
+						<div class="span5">
+							<div class="karel-viewport"></div>
+						</div>
+						<style type="text/css" media="screen">
+							#karel-4 .karel-viewport {
+								display:block;
+								margin:0 auto;
+								width:300px;
+								height:300px;
+							}
+						</style>
+					</div>
+					<p>
+						Can you think of any ways to make this process a little more efficient? Are there command sequences you find yourself making repetitively?
+					</p>
 				</section><!-- /meet-karel -->
 			</div>
 		</div>

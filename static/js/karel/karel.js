@@ -35,11 +35,18 @@
 			this.drawWalls();
 			this.drawGrid();
 			if (init.cheese) {
+				this.originalCheeseCells = $.makeArray(init.cheese);
 				this.cheeseCells = init.cheese;
 				this.refreshCheese();
 			}
 			this.karel.setScale(this.grid.size / 150);	 // trial and error here ...
-			this.setKarelCell(init.karelStart);
+			if (init.karelStart) {
+				this.karelStart = $.extend({}, init.karelStart);
+			}
+			else {
+				this.karelStart = { x: 1, y: 1 };
+			}
+			this.setKarelCell(this.karelStart);
 			this.karel.setDirection('right');
 			this.karel.setCheesePouch(init.cheesePouch || 0);
 			
@@ -300,21 +307,29 @@
 	};
 
 	KarelApp.prototype.reset = function() {
-		this.setKarelCell({ x: 1, y: 1 });
-		this.karel.setDirection('right');
+		try {
+			this.setKarelCell(this.karelStart);
+			this.cheeseCells = $.makeArray(this.originalCheeseCells);
+			this.karel.setDirection('right');
+			this.refreshCheese();
+		}
+		catch (e) {
+			console.log(e);
+		}
 	};
 	
 	KarelApp.prototype.setKarelCell = function(cell) {
 		// in karel world, y starts at 1 at the bottom and goes up.
 		// x also starts at 1 instead of 0.
-		var originalCell = { x: cell.x, y: cell.y };
-		cell.y = this.grid.y - cell.y;
-		cell.x -= 1;
-		var x = (cell.x * this.grid.size) + (this.grid.size / 2);
-		var y = (cell.y * this.grid.size) + (this.grid.size / 2);
+		var originalCell = $.extend({}, cell);
+		var modCell = $.extend({}, cell);
+		modCell.y = this.grid.y - modCell.y;
+		modCell.x -= 1;
+		var x = (modCell.x * this.grid.size) + (this.grid.size / 2);
+		var y = (modCell.y * this.grid.size) + (this.grid.size / 2);
 		
 		// bounds check
-		if (cell.x >= 0 && cell.y >= 0 && cell.x < this.grid.x && cell.y < this.grid.y) {
+		if (modCell.x >= 0 && modCell.y >= 0 && modCell.x < this.grid.x && modCell.y < this.grid.y) {
 			this.karel.setPosition({ x: x, y: y });
 			this.karelCell = originalCell;
 		}
