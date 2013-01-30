@@ -25,9 +25,11 @@
 			
 			this.cheeseSprites = [];
 			this.cheeseCells = [];
-			this.walls = init.walls;
-			this.viewport.run();
 			this.calculateGrid(init.gridDimensions);
+			this.walls = this.getOuterWalls().concat(init.walls);
+
+			this.viewport.run();
+			
 			if (init.goal) {
 				this.goal = init.goal;
 				this.drawGoal();
@@ -50,6 +52,9 @@
 			this.karel.setDirection('right');
 			this.karel.setCheesePouch(init.cheesePouch || 0);
 			
+			this.$cheesePouchCount = $el.find('.karel-cheese-pouch-count');
+			$(this.karel).on('cheesePouchCountChanged', $.proxy(this.handleCheesePouchCountChanged, this));
+			
 			$el.data('karel-instance', this);
 			KarelApp.instances.push(this);
 			
@@ -70,6 +75,19 @@
 		else {
 			throw new Romano.Exception('Could not initialize Karel.', el);
 		}
+	};
+	
+	KarelApp.prototype.getOuterWalls = function() {
+		var s = this.grid.size;
+		var w = s * this.grid.x;
+		var h = s * this.grid.y;
+
+		return [
+			{ start: { x: 0, y: 0 }, end: { x: this.grid.x , y: 0 } },
+			{ start: { x: this.grid.x, y: 0 }, end: { x: this.grid.x , y: this.grid.y } },
+			{ start: { x: this.grid.x , y: this.grid.y }, end: { x: 0 , y: this.grid.y } },
+			{ start: { x: 0 , y: this.grid.y }, end: { x: 0 , y: 0 } },
+		];
 	};
 	
 	KarelApp.prototype.getKarelCell = function() {
@@ -128,7 +146,7 @@
 		};
 		
 		// outer walls
-		p.path('M0,0L' + w + ',' + 0 + ',L' + w + ',' + h + 'L0,' + h + 'L0,0').attr(wallAttr).toBack();
+		//p.path('M0,0L' + w + ',' + 0 + ',L' + w + ',' + h + 'L0,' + h + 'L0,0').attr(wallAttr).toBack();
 		
 		for (var i = 0; i < this.walls.length; i++) {
 			var w = $.extend({}, this.walls[i]);
@@ -164,9 +182,7 @@
 				}
 			});
 			c.setScale(this.grid.size / 350);	// more trial and error here ...
-			
-			// ugh
-			c.renderer.toBack();
+			c.sendToBack();
 			
 			this.cheeseSprites.push(c);
 		}
@@ -195,6 +211,12 @@
 	KarelApp.prototype.placeCheeseInCell = function(cell) {
 		this.cheeseCells.push(cell);
 		this.refreshCheese();
+	};
+	
+	KarelApp.prototype.handleCheesePouchCountChanged = function(event, pouchCount) {
+		if (this.$cheesePouchCount && this.$cheesePouchCount.length) {
+			this.$cheesePouchCount.html('Karel has ' + this.karel.getCheesePouch() + ' cheese(s) in his pouch.');
+		}
 	};
 	
 	/* not working yet
@@ -349,6 +371,9 @@
 				if (e instanceof KarelApp.WallException) {
 					alert('You ran into a wall! Reset and try again!');
 				}
+				else {
+					console.log('Error: ', e);
+				}
 			}
 		};
 		var pickUpCheese = function() {
@@ -358,6 +383,9 @@
 			catch (e) {
 				if (e instanceof KarelApp.NoCheeseInCellException) {
 					alert('There\'s no cheese in that cell!');
+				}
+				else {
+					console.log('Error: ', e);
 				}
 			}
 		};
@@ -370,9 +398,12 @@
 					alert('Karel\'s cheese pouch is empty!');
 				}
 				else {
-					console.log(e);
+					console.log('Error: ', e);
 				}
 			}
+		};
+		var frontIsClear = function() {
+			return instance.karel.frontIsClear();
 		};
 		try {
 			eval(content);

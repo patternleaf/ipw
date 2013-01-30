@@ -108,8 +108,15 @@
 			//this.addAngularMomentum(amt);
 		},
 		
+		// @param cheese number
 		setCheesePouch: function(cheese) {
 			this.cheesePouch = cheese;
+			$(this).trigger('cheesePouchCountChanged', [this.cheesePouch]);
+		},
+		
+		// @return number
+		getCheesePouch: function() {
+			return this.cheesePouch;
 		},
 		
 		pickUpCheese: function() {
@@ -117,6 +124,7 @@
 			if (this.appInstance.cheeseExistsInCell(cell)) {
 				this.appInstance.removeCheeseInCell(cell);
 				this.cheesePouch++;
+				$(this).trigger('cheesePouchCountChanged', [this.cheesePouch]);
 			}
 			else {
 				throw new KarelApp.NoCheeseInCellException();
@@ -128,54 +136,40 @@
 			if (this.cheesePouch > 0) {
 				this.appInstance.placeCheeseInCell(cell);
 				this.cheesePouch--;
+				$(this).trigger('cheesePouchCountChanged', [this.cheesePouch]);
 			}
 			else {
 				throw new KarelApp.NoCheeseInPouchException();
 			}
 		},
 		
-		move: function() {
-			var pos = this.getPosition();
-			var center = this.getRotationCenter();
+		getCellAddressInFront: function() {
 			var cell = this.appInstance.getKarelCell();
-			var newCell;
+			var frontCell;
 			switch (this.direction) {
 				case 'up':
-					newCell = { x: cell.x, y: cell.y + 1 };
-					if (!this.appInstance.wallIsInWay(cell, newCell)) {
-						this.appInstance.setKarelCell(newCell);
-					}
-					else {
-						throw new KarelApp.WallException();
-					}
+					frontCell = { x: cell.x, y: cell.y + 1 };
 				break;
 				case 'right':
-					newCell = { x: cell.x + 1, y: cell.y };
-					if (!this.appInstance.wallIsInWay(cell, newCell)) {
-						this.appInstance.setKarelCell(newCell);
-					}
-					else {
-						throw new KarelApp.WallException();
-					}
+					frontCell = { x: cell.x + 1, y: cell.y };
 				break;
 				case 'left':
-					newCell = { x: cell.x - 1, y: cell.y };
-					if (!this.appInstance.wallIsInWay(cell, newCell)) {
-						this.appInstance.setKarelCell(newCell);
-					}
-					else {
-						throw new KarelApp.WallException();
-					}
+					frontCell = { x: cell.x - 1, y: cell.y };
 				break;
 				case 'down':
-					newCell = { x: cell.x, y: cell.y - 1 };
-					if (!this.appInstance.wallIsInWay(cell, newCell)) {
-						this.appInstance.setKarelCell(newCell);
-					}
-					else {
-						throw new KarelApp.WallException();
-					}
+					frontCell = { x: cell.x, y: cell.y - 1 };
 				break;
+			}
+			return frontCell;
+		},
+		
+		move: function() {
+			if (this.frontIsClear()) {
+				var nextCell = this.getCellAddressInFront();
+				this.appInstance.setKarelCell(nextCell);
+			}
+			else {
+				throw new KarelApp.WallException();
 			}
 		},
 		
@@ -194,6 +188,12 @@
 					this.setDirection('right');
 				break;
 			}
+		},
+		
+		frontIsClear: function() {
+			var cell = this.appInstance.getKarelCell();
+			var nextCell = this.getCellAddressInFront();
+			return !(this.appInstance.wallIsInWay(cell, nextCell));
 		},
 
 		setDirection: function(direction) {
