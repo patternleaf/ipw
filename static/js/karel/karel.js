@@ -12,10 +12,10 @@
 		var $input = $el.find('.karel-input');
 		var $run = $el.find('button.karel-run');
 		var $reset = $el.find('button.karel-reset');
-		if ($viewportContainer.length && $input.length && $input.length && $run.length && $reset.length) {
+		if ($viewportContainer.length) {
 			this.viewport = new Romano.Viewport({
-					width: $viewportContainer.width(),
-					height: $viewportContainer.height()
+					width: init.width || $viewportContainer.width(),
+					height: init.height || $viewportContainer.height()
 				},
 				$viewportContainer.get(0),
 				new Romano.RaphaelSurface()
@@ -50,11 +50,12 @@
 			}
 			this.setKarelCell(this.karelStart);
 			this.karel.setDirection('right');
-			this.karel.setCheesePouch(init.cheesePouch || 0);
 			
 			this.$cheesePouchCount = $el.find('.karel-cheese-pouch-count');
 			$(this.karel).on('cheesePouchCountChanged', $.proxy(this.handleCheesePouchCountChanged, this));
-			
+
+			this.karel.setCheesePouch(init.cheesePouch || 0);
+
 			$el.data('karel-instance', this);
 			KarelApp.instances.push(this);
 			
@@ -357,7 +358,7 @@
 		}
 	};
 	
-	KarelApp.prototype.run = function(content) {
+	KarelApp.prototype.run = function(program) {
 		var instance = this;
 		
 		var turnLeft = function() {
@@ -405,11 +406,46 @@
 		var frontIsClear = function() {
 			return instance.karel.frontIsClear();
 		};
+
+		var cheeseIsPresent = function() {
+			return instance.cheeseExistsInCell(instance.getKarelCell());
+		};
+		
+		var facingEast = function() {
+			return instance.karel.getDirection() == 'right';
+		};
+		var facingNorth = function() {
+			return instance.karel.getDirection() == 'up';
+		};
+		var facingSouth = function() {
+			return instance.karel.getDirection() == 'down';
+		};
+		var facingWest = function() {
+			return instance.karel.getDirection() == 'left';
+		};
+
 		try {
-			eval(content);
+			if (typeof program == 'string') {
+				eval(program);
+			}
+			else if (typeof program == 'function') {
+				program({
+					turnLeft: turnLeft,
+					move: move,
+					pickUpCheese: pickUpCheese,
+					putDownCheese: putDownCheese,
+					frontIsClear: frontIsClear,
+					cheeseIsPresent: cheeseIsPresent,
+					isFacingSouth: facingSouth,
+					isFacingNorth: facingNorth,
+					isFacingEast: facingEast,
+					isFacingWest: facingWest
+				});
+			}
 		}
 		catch (e) {
 			alert('Oops! The computer couldn\'t understand your commands.');
+			console.log(e);
 		}
 	};
 	
