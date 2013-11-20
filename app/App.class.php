@@ -13,30 +13,40 @@ class App {
 	
 	function __construct() {
 		$this->request = Request::currentRequest();
-		$this->loadDefaults();
 	}
 	
 	function loadDefaults() {
 		$this->templates = array(
-			'templates/header', 
-			'templates/footer', 
-			'templates/default'
+			'templates/header.php', 
+			'templates/footer.php', 
+			'templates/default.php'
 		);
-		$this->setFragment('HTMLPage', '<h1>No Content Defined.</h1>');
+		//$this->setFragment('HTMLPage', '<h1>No Content Defined.</h1>');
 	}
 	
 	function loadContentForRequest() {
-		router()->load($this->request->path);
+		$this->loadDefaults();
+		
+		$response = router()->load($this->request->path);
+		
+		if ($response) {
+			foreach ($response['includes'] as $include) {
+				include($include);
+			}
+			if (isset($response['templates'])) {
+				$this->templates = $response['templates'];
+			}
+		}
+		foreach ($this->templates as $template) {
+			include($template);
+		}
 	}
 	
 	function renderFragment($key) {
 		echo $this->getFragment($key);
 	}
 	
-	function renderHTMLPage() {
-		foreach ($this->templates as $fileName) {
-			include ("$fileName.php");
-		}
+	function renderHTTPBody() {
 		echo $this->getFragment('HTMLPage');
 	}
 	
@@ -52,6 +62,9 @@ class App {
 	}
 
 	function getCurrentPathSlug() {
+		// foreach ($this->request->pathParts as $key => $value) {
+		// 	error_log('pathparts: '.$key.' => '.$value);
+		// }
 		return $this->request->pathParts[count($this->request->pathParts) - 1];
 	}
 	
@@ -63,9 +76,9 @@ class App {
 		$this->headers[] = $header;
 	}
 	
-	function sendHeaders() {
+	function sendHTTPHeaders() {
 		foreach ($this->headers as $header) {
-			error_log('sending header '.$header);
+			//error_log('sending header '.$header);
 			header($header);
 		}
 	}

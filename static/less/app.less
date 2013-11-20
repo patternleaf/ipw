@@ -88,7 +88,7 @@ section {
 	position:relative;
 }
 	
-button.eval, button.karel-run, button.karel-reset {
+button.eval, button.php-run, button.karel-run, button.karel-reset {
 	display:block;
 	float:right;
 	margin:1em .5em 0 0;
@@ -149,3 +149,39 @@ dfn {
 	border-radius:2px;
 	padding:0 4px;
 }
+
+.data-flow-diagram {
+	overflow:hidden;
+	margin-right:1em;
+	margin-left:1em;
+	padding:10px;
+	li {
+		list-style:none;
+		float:left;
+		font-size:14px;
+		border-radius:4px;
+		background:#666;
+		color:white;
+		padding:4px;
+		box-shadow:0 2px 3px rgba(0, 0, 0, 0.5);
+		
+		i {
+			color:white;
+			margin-right:4px;
+		}
+		
+		&.pipe {
+			margin:0 10px;
+			width:1em;
+			height:1em;
+			background:white;
+			color:#888;
+			box-shadow:none;
+		}
+		
+		&.highlight {
+			background:#ee9900;
+		}
+	}
+}
+

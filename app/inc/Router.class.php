@@ -27,9 +27,14 @@ class Router {
 	}
 
 	function load($path) {
-		foreach ($this->routes as $pattern => $files) {
+		$result = array(
+			'includes' => array()
+		);
+		
+		foreach ($this->routes as $pattern => $response) {
 			$matches = array();
 			if (preg_match($pattern, $path, $matches)) {
+				$files = $response['includes'];
 				if (is_string($files)) {
 					$files = explode(' ', $files);
 				}
@@ -39,11 +44,18 @@ class Router {
 							$file = str_replace('$'.$i, $matches[$i], $file);
 						}
 					}
-					include($file);
+					// if (is_dir(getcwd().'/'.$file) && file_exists(getcwd().'/'.$file.'/index.php')) {
+					// 	$file .= '/index.php';
+					// }
+					$result['includes'][] = $file;
 				}
-				break;
+				if (isset($response['templates'])) {
+					$result['templates'] = $response['templates'];
+				}
+				return $result;
 			}
 		}
+		return false;
 	}
 
 }

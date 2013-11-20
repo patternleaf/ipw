@@ -363,4 +363,11 @@ sliceCheese();</div>
 app()->setFragment('HTMLBodyContent', ob_get_clean()); 
 
 appendSessionBodyTail();
+
+ob_start();
+?>
+<script type="text/javascript" charset="utf-8" src="<?php app()->contentWD(); ?>exercise-1.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php app()->contentWD(); ?>karel-exercises.js"></script>
+<?php
+	app()->appendTo('HTMLBodyTail', ob_get_clean());	
 ?>

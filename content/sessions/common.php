@@ -40,15 +40,42 @@ function appendSessionBodyTail() {
 			var inputId = $input.attr('id');
 			var editor = ace.edit(inputId);
 			editor.setTheme("ace/theme/xcode");
-			editor.getSession().setMode("ace/mode/javascript");
+			var lang = $(this).data('language') || 'javascript';
+			editor.getSession().setMode("ace/mode/" + lang);
 			$input.data('editor', editor);
 			if ($(this).hasClass('non-editable')) {
 				editor.setReadOnly(true);
 			}
 		});
+		
+		$('.line-highlighter').each(function() {
+			$(this).on('click', function() {
+				var $target = $('#' + $(this).data('target'));
+				if ($target.length) {
+					var editor = $target.data('editor');
+					editor.gotoLine($(this).data('line'));
+				}
+				return false;
+			});
+		});
+		
+		$('.php-run').on('click', function() {
+			var $codeContainer = $(this).parents('.live-example').find('.pretty-code');
+			var $resultContainer = $(this).parents('.live-example').find('iframe')
+			var editor = $codeContainer.data('editor');
+			if (editor) {
+				var code = '?>' + editor.getValue();
+				ipw.evalPHP(code, function(result) {
+					$resultContainer.get(0).contentWindow.document.documentElement.innerHTML = result;
+				}, function(textStatus, error) {
+					console.log(textStatus, error);
+				});
+				
+			}
+		});
 	});
 </script>
-<script type="text/javascript" charset="utf-8" src="<?php app()->contentWD(); ?>exercise-1.js"></script>
+
 
 <script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/dependencies/raphael-1.3.2.js"></script>
 <script type="text/javascript" src="<?php echo STATIC_URL; ?>js/romano/classes/Romano.js"></script>
@@ -63,8 +90,7 @@ function appendSessionBodyTail() {
 <script type="text/javascript" charset="utf-8" src="<?php echo STATIC_URL; ?>js/karel/classes/Karel.js"></script>
 <script type="text/javascript" charset="utf-8" src="<?php echo STATIC_URL; ?>js/karel/classes/Cheese.js"></script>
 
-<script type="text/javascript" charset="utf-8" src="<?php app()->contentWD(); ?>exercise-2.js"></script>
-
+<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/app.js"></script>
 
 <?php
 	app()->appendTo('HTMLBodyTail', ob_get_clean());

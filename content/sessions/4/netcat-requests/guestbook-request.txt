@@ -1,0 +1,6 @@
+POST /content/sessions/4/starter-file-based/index-fully-styled.php HTTP/1.1
+Host: intro-web-programming.dev
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 47
+
+title=An+Entry&name=Someone&message=A+message.

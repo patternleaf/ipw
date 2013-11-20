@@ -1,13 +1,14 @@
 <?php
 
 router()->set(array(
-	'/^\/?$/' 						=> array('content/home.php'),
-	'/^\/classes\/?$/' 				=> array('content/sessions.php'),
-	'/^\/sessions\/?$/' 			=> array('content/sessions.php'),
-	'/^\/sessions\/([\d])\/?$/' 	=> array('content/sessions/$1/session-$1.php'),
-	'/^\/sessions\/([\d])\/(.*)$/' 	=> array('content/sessions/$1/$2'),
-	'/^\/resources\/?$/' 			=> array('content/resources.php'),
-	'/^\/contact\/?$/' 				=> array('content/contact.php'),
-	'/^\/about\/?$/' 				=> array('content/about.php'),
-	'/^.*$/' 						=> array('content/404.php'),
+	'/^\/?$/' 						=> array('includes' => 'content/home.php'),
+	'/^\/api\/?(.*)$/' 				=> array('includes' => 'app/endpoint.php', 'templates' => array()),
+	'/^\/classes\/?$/' 				=> array('includes' => 'content/sessions.php'),
+	'/^\/sessions\/?$/' 			=> array('includes' => 'content/sessions.php'),
+	'/^\/sessions\/([\d])\/?$/' 	=> array('includes' => 'content/sessions/$1/session-$1.php'),
+	'/^\/sessions\/([\d])\/(.*)$/' 	=> array('includes' => 'content/sessions/$1/$2'),
+	'/^\/resources\/?$/' 			=> array('includes' => 'content/resources.php'),
+	'/^\/contact\/?$/' 				=> array('includes' => 'content/contact.php'),
+	'/^\/about\/?$/' 				=> array('includes' => 'content/about.php'),
+	'/^.*$/' 						=> array('includes' => 'content/404.php'),
 ));
