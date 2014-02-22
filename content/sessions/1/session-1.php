@@ -14,11 +14,11 @@ ob_start();
 	</header>
 	<div class="container">
 		<div class="row">
-			<div class="span3 session-sidebar">
+			<div class="col-md-3 session-sidebar">
 				<ul class="nav nav-tabs nav-stacked" id="sidebar-nav">
 				</ul>
 			</div>
-			<div class="span9 session-content">
+			<div class="col-md-9 session-content">
 				<section id="intro" class="first">
 					<blockquote class="pull-right first">
 						<p>At least <a href="http://hubot.github.com/">Hubot</a> has an existential purpose. <a href="http://en.wikipedia.org/wiki/Karel_the_robot">Karel</a>'s only aim was to make me miserable.</p>

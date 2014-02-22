@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-	<div class="hero-unit">
+	<div class="jumbotron">
 		<h1>Resources</h1>
 	</div>
 	<p>Resources will go here.</p>

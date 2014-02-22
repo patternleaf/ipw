@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-	<div class="hero-unit">
+	<div class="jumbotron">
 		<h1>Contact</h1>
 	</div>
 	<p>Contact info going here.</p>

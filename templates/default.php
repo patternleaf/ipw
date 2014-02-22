@@ -3,7 +3,12 @@
 <head>
 
 <?php if (DEVELOP) : ?>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link rel="stylesheet/less" href="<?php echo STATIC_URL; ?>less/styles.less?<?php echo rand(); ?>" type="text/css">
+	
 	<script type="text/javascript" charset="utf-8">
 		// less = {
 		// 	dumpLineNumbers: 'all'
@@ -27,18 +32,14 @@
 	<link rel="shortcut icon" href="../assets/ico/favicon.png">
 		
 	<?php app()->renderHTMLHead(); ?>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	
+
 </head>
 <body <?php echo app()->getFragment('HTMLBodyAttributes'); ?>>
 	
 	<?php app()->renderHTMLBody(); ?>
 
 	<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
-	<script src="<?php echo STATIC_URL; ?>js/jquery-1.8.3.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="<?php echo STATIC_URL; ?>js/bootstrap.js"></script>
 
 	<?php app()->renderFragment('HTMLBodyTail'); ?>

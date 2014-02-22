@@ -12,11 +12,11 @@ ob_start();
 	</header>
 	<div class="container">
 		<div class="row">
-			<div class="span3 session-sidebar">
+			<div class="col-md-3 session-sidebar">
 				<ul class="nav nav-tabs nav-stacked" id="sidebar-nav">
 				</ul>
 			</div>
-			<div class="span9 session-content">
+			<div class="col-md-9 session-content">
 				<section id="intro" class="first">
 					<blockquote class="pull-right first">
 						<p>Problem solving is the essence of programming; the rules are just a minor concern along the way.</p>

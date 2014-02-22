@@ -4,7 +4,7 @@ app()->addHeader('HTTP/1.0 404 Not Found');
 ob_start();
 ?>
 
-	<div class="hero-unit">
+	<div class="jumbotron">
 		<h1>404, Dude!</h1>
 	</div>
 	<p>Ah, bummer.</p>

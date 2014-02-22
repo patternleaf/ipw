@@ -2,7 +2,7 @@
 <hr>
 
 <footer>
-	<p>&copy; Patternleaf Design 2012</p>
+	<p>&copy; 2014 patternleaf</p>
 </footer>
 
 <?php app()->setFragment('HTMLBodyFooter', ob_get_clean()); ?>

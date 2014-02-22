@@ -31,6 +31,7 @@ class App {
 		
 		if ($response) {
 			foreach ($response['includes'] as $include) {
+				error_log($include);
 				include($include);
 			}
 			if (isset($response['templates'])) {
@@ -113,6 +114,12 @@ class App {
 	}
 	function contentWD() {
 		echo $this->getContentWD();
+	}
+	function getSessionWD($sessionNum) {
+		return $this->getContentWD().'/sessions/'.$sessionNum.'/';
+	}
+	function sessionWD($sessionNum) {
+		echo $this->getSessionWD($sessionNum);
 	}
 	
 }
