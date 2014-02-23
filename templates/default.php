@@ -14,7 +14,7 @@
 		// 	dumpLineNumbers: 'all'
 		// };
 	</script>
-	<script src="<?php echo STATIC_URL; ?>js/less-1.3.3.min.js" type="text/javascript"></script>
+	<script src="<?php echo STATIC_URL; ?>js/less-1.6.3.min.js" type="text/javascript"></script>
 <?php else : ?>
 	<link rel="stylesheet" href="/css/styles.css" type="text/css">
 <?php endif; ?>

@@ -192,7 +192,7 @@ dfn {
 .jumbotron {
 	background-image:url(../img/gears-long.png);
 	color:#eee;
-	text-shadow:0 3px 5px #333;
+	text-shadow:0 3px 5px #000;
 }
 
 .jumbotron a {
@@ -217,4 +217,26 @@ a:hover {
 
 * > section:first-child {
 	padding-top:0;
+}
+
+body.deck {
+
+	.navbar li {
+		padding:0;
+	}
+	.navbar-static-top {
+		margin-bottom:0;
+	}
+	
+	// reset deck style here.
+	.deck-style-container {
+		@import (less) '/static/js/deck.js/themes/style/swiss.css';
+	}
+
+	.deck-container {
+
+		.highlight {
+			color:#ED8600;
+		}
+	}
 }

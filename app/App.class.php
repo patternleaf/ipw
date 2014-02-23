@@ -31,7 +31,6 @@ class App {
 		
 		if ($response) {
 			foreach ($response['includes'] as $include) {
-				error_log($include);
 				include($include);
 			}
 			if (isset($response['templates'])) {
@@ -66,7 +65,10 @@ class App {
 		// foreach ($this->request->pathParts as $key => $value) {
 		// 	error_log('pathparts: '.$key.' => '.$value);
 		// }
-		return $this->request->pathParts[count($this->request->pathParts) - 1];
+		if (count($this->request->pathParts) > 0) {
+			return $this->request->pathParts[count($this->request->pathParts) - 1];
+		}
+		return '';
 	}
 	
 	function setTemplates($override) {

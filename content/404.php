@@ -5,8 +5,13 @@ ob_start();
 ?>
 
 	<div class="jumbotron">
-		<h1>404, Dude!</h1>
+		<div class="container"><h1>404, Dude!</h1></div>
 	</div>
-	<p>Ah, bummer.</p>
+	<div class="container">
+		<h2>Ah, bummer.</h2>
+		<p>
+			That URL doesn't go anywhere. Could be you. Could be me. Let's communicate.
+		</p>
+	</div>
 
 <?php app()->setFragment('HTMLBodyContent', ob_get_clean()); ?>

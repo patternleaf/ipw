@@ -10,20 +10,14 @@
 		<div class="row">
 			<div class="col-md-9">
 				<ul>
-					<li><h3>Introductions</h3></li>
+					<li><h3><a href="decks/introductions">Introductions</a></h3></li>
+					<li><h3><a href="decks/environment-setup">Environment Setup</a></h3></li>
+					<li><h3><a href="decks/html-css-review">HTML/CSS Review</a></h3></li>
 					<li><h3>Programming as Recipes</h3></li>
-					<li><h3>HTML/CSS Review</h3></li>
 					<li><h3>Intro to Karel</h3></li>
 				</ul>
 			</div>
 			<div class="col-md-3">
-				<!--
-				<ul class="nav nav-tabs nav-stacked affix" id="sidebar-nav">
-					<li><a href="#introductions">Introductions</a></li>
-					<li><a href="#recipes">Programming as Recipes</a></li>
-					<li><a href="#karel-1">Intro to Karel</a></li>
-				</ul>
-				-->
 			</div>
 		</div>
 	</div>

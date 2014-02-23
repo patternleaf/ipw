@@ -25,9 +25,9 @@
 					</div>
 					<ul class="session-links">
 						<li><a href="/decks/introductions">Deck: Introductions</a></li>
-						<li>Deck: HTML/CSS Review</li>
-						<li>Deck: Intro to Karel</li>
-						<li>Extra Reading</li>
+						<li><a href="/decks/environment-setup">Deck: Environment Setup</a></li>
+						<li><a href="/decks/intro-to-karel">Deck: Intro to Karel</a></li>
+						<li><a href="/sessions/1">Extra Reading</a></li>
 					</ul>
 				</section>
 				<section id="session-2">
