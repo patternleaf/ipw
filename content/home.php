@@ -1,12 +1,12 @@
 <?php 
-app()->setFragment('HTMLTitle', 'Intro to Web Programming');
+app()->setFragment('HTMLTitle', 'Intro to Programming for the Web');
 ob_start();
 ?>
 	<!-- Main hero unit for a primary marketing message or call to action -->
 	<div class="container">
 		<div class="jumbotron homepage">
 			<h1>Intro to Programming for the Web</h1>
-			<p>Web Application Development Transitions Certificate | <strong class="color-highlight">Boulder Digital Arts</strong> </p>
+			<p><a href="http://www.boulderdigitalarts.com/training/details.php?offering=253">Web Application Development Transitions Certificate</a> | <strong class="color-highlight">Boulder Digital Arts</strong> </p>
 			<p><small>Winter 2014 Edition</small></p>
 		</div>
 
@@ -17,7 +17,7 @@ ob_start();
 			<div class="col-md-6">
 				<h3>Welcome!</h3>
 				<p>
-					This site will be your repository for wonder and magic&mdash;or at least lecture slides&mdash;as we work through the 5-week course. It's a work-in-progress, so please pardon the dust!
+					This site will be your repository for wonder and magic&mdash;well, ok: lecture slides&mdash;as we work through the 5-week course. The site is a work-in-progress, and the course will adapt as we go, so please pardon any dust! Use the links below or in the header to find what you need.
 				</p>
 			</div>
 			<div class="col-md-6">
@@ -26,37 +26,33 @@ ob_start();
 		</div>
 		<div class="row">
 			<div class="col-md-3">
-				<h2><a href="/sessions">Sessions</a></h2>
+				<h2><a href="/sessions">Sessions</a> <a class="btn btn-success" href="/sessions" role="button">Go &raquo;</a></h2>
 				<p>Slides and links by session.</p>
-				<p><a class="btn btn-default" href="/sessions" role="button">Go &raquo;</a></p>
 			</div>
 			<div class="col-md-3">
-				<h2><a href="/topics">Topics</a></h2>
-				<p>Slides broken out by topic.</p>
-				<p><a class="btn btn-default" href="/topics" role="button">Go &raquo;</a></p>
+				<h2><a href="/decks">Decks</a> <a class="btn btn-success" href="/decks" role="button">Go &raquo;</a></h2>
+				<p>All the slide decks.</p>
 			</div>
 			<div class="col-md-3">
-				<h2><a href="/exercises">Exercises</a></h2>
-				<p>Materials for exercises</p>
-				<p><a class="btn btn-default" href="/exercises" role="button">Go &raquo;</a></p>
+				<h2><a href="/exercises">Exercises</a> <a class="btn btn-success" href="/exercises" role="button">Go &raquo;</a></h2>
+				<p>Yay! Homework.</p>
 			</div>
 			<div class="col-md-3">
-				<h2><a href="/resources">Resources</a></h2>
+				<h2><a href="/resources">Resources</a> <a class="btn btn-success" href="/resources" role="button">Go &raquo;</a></h2>
 				<p>Handy links.</p>
-				<p><a class="btn btn-default" href="/resources" role="button">Go &raquo;</a></p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6">
-			</div>
 			<div class="col-md-3">
 				<h4><a href="/contact">Contact</a></h4>
 			</div>
 			<div class="col-md-3">
 				<h4><a href="/about">About</a></h4>
 			</div>
+			<div class="col-md-6">
+			</div>
+
 		</div>
-		<small>Photo credits: <a href="http://www.flickr.com/photos/26782864@N00/4782904694">William Warby</a>, <a href="http://www.flickr.com/photos/iamshinji/3063220244/">Dino Latoga</a></small>
 	</div>
 
 <?php app()->setFragment('HTMLBodyContent', ob_get_clean()); ?>

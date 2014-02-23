@@ -1,6 +1,6 @@
 <?php 
 include('content/sessions/common.php');
-app()->setFragment('HTMLTitle', 'Intro to Web Programming: Session 1');
+app()->setFragment('HTMLTitle', 'Intro to Programming for the Web: Session 1');
 app()->setFragment('HTMLBodyAttributes', 'data-spy="scroll" data-offset="100" data-target="#sidebar-nav"');
 include_once(__DIR__.'/../common.php');
 ob_start();
@@ -48,7 +48,7 @@ ob_start();
 						<li><code>sliceCheese();</code></li>
 					</ul>
 					<div class="row live-exercise">
-						<div class="span4">
+						<div class="col-md-4">
 							<div class="code-container" style="height:200px; width:100%;">
 								<div id="exercise-1-input" class="pretty-code" style="height:200px; width:100%;">makeCrust();
 spreadSauce();
@@ -57,7 +57,7 @@ sliceCheese();</div>
 							</div>
 							<button id="exercise-1-eval" class="eval">Make It!</button>
 						</div>
-						<div class="span5">
+						<div class="col-md-5">
 							<canvas id="exercise-1-output"></canvas>
 						</div>
 						<style type="text/css" media="screen">
@@ -96,12 +96,14 @@ sliceCheese();</div>
 						Now of course when we say "make" a pizza here what we mean is "draw" a pizza. But the computer, it turns out, doesn't even know how to do that. What it's actually doing is just is drawing ovals and rectangles of various colors. The command <code>spreadSauce();</code> doesn't mean anything inherently to the computer. What's going on is that you're not talking directly to the computer. <em>These commands are actually recipes in and of themselves.</em> Let's take a look at the recipe for <code>spreadSauce()</code>.
 					</p>
 					<div class="row live-example">
-						<div class="code-container" style="height:100px; width:100%;">
-							<div id="example-1-input" class="pretty-code non-editable" style="height:100px; width:100%;">function spreadSauce() {
+						<div class="col-md-5">
+							<div class="code-container" style="height:100px; width:100%;">
+								<div id="example-1-input" class="pretty-code non-editable" style="height:100px; width:100%;">function spreadSauce() {
 	fill(200, 120, 100);
 	ellipse(100, 100, 160, 160);
 }
 </div>
+							</div>
 						</div>
 					</div>
 					<p>
@@ -212,7 +214,7 @@ sliceCheese();</div>
 						Using a very small set of commands, you'll be helping Karel in his tasks.
 					</p>
 					<div class="row live-exercise" id="karel-1">
-						<div class="span4">
+						<div class="col-md-4">
 							<h4>Goal</h4>
 							<p>
 								Using the commands <code>move();</code>, and <code>turnLeft();</code> navigate Karel to the blue dot. Try to do it all in one click of the Run button.
@@ -223,7 +225,7 @@ sliceCheese();</div>
 							<button class="karel-run">Run!</button>
 							<button class="karel-reset">Reset</button>
 						</div>
-						<div class="span5">
+						<div class="col-md-5">
 							<div class="karel-viewport"></div>
 						</div>
 						<style type="text/css" media="screen">
@@ -244,7 +246,7 @@ sliceCheese();</div>
 					</p>
 
 					<div class="row live-exercise" id="karel-2" style="clear:both;">
-						<div class="span4">
+						<div class="col-md-4">
 							<h4>Goal</h4>
 							<p>
 								Using the comands <code>move();</code> and <code>turnLeft();</code>, move Karel from the lower-left to the upper-right.
@@ -255,7 +257,7 @@ sliceCheese();</div>
 							<button class="karel-run">Run!</button>
 							<button class="karel-reset">Reset</button>
 						</div>
-						<div class="span5">
+						<div class="col-md-5">
 							<div class="karel-viewport"></div>
 						</div>
 						<style type="text/css" media="screen">
@@ -288,7 +290,7 @@ sliceCheese();</div>
 						Karel does, too. Many of Karel's tasks involve picking up or putting down cheese. Don't ask why this is so important; it just is.
 					</p>
 					<div class="row live-exercise" id="karel-3">
-						<div class="span4">
+						<div class="col-md-4">
 							<h4>Goal</h4>
 							<p>
 								Using the comands <code>move();</code>, <code>pickUpCheese();</code>, and <code>putDownCheese();</code>, have Karel pick up the cheese in (2, 1) and deposit it in (3, 1). Then, have Karel move to the far lower-right corner (4, 1).
@@ -299,7 +301,7 @@ sliceCheese();</div>
 							<button class="karel-run">Run!</button>
 							<button class="karel-reset">Reset</button>
 						</div>
-						<div class="span5">
+						<div class="col-md-5">
 							<div class="karel-viewport"></div>
 							<div class="karel-cheese-pouch-count"></div>
 						</div>
@@ -328,7 +330,7 @@ sliceCheese();</div>
 						<img src="<?php app()->contentWD();?>cheese-end.png" style="width:300px; margin:0 auto; display:block;">
 					</figure>
 					<div class="row live-exercise" id="karel-4">
-						<div class="span4">
+						<div class="col-md-4">
 							<h4>Goal</h4>
 							<p>
 								Using the comands <code>move();</code>, <code>turnLeft();</code>, <code>pickUpCheese();</code>, and <code>putDownCheese();</code>, have Karel pick up all the cheese in the world and deposit it in the notch (4, 1). Then, have Karel move to the blue dot.
@@ -339,7 +341,7 @@ sliceCheese();</div>
 							<button class="karel-run">Run!</button>
 							<button class="karel-reset">Reset</button>
 						</div>
-						<div class="span5">
+						<div class="col-md-5">
 							<div class="karel-viewport"></div>
 						</div>
 						<style type="text/css" media="screen">

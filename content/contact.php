@@ -1,4 +1,4 @@
-<?php app()->setFragment('HTMLTitle', 'Intro to Web Programming: Contact');
+<?php app()->setFragment('HTMLTitle', 'Intro to Programming for the Web: Contact');
 ob_start();
 ?>
 

@@ -1,5 +1,5 @@
 <?php 
-app()->setFragment('HTMLTitle', 'Intro to Web Programming: 404 Page Not Found');
+app()->setFragment('HTMLTitle', 'Intro to Programming for the Web: 404 Page Not Found');
 app()->addHeader('HTTP/1.0 404 Not Found');
 ob_start();
 ?>

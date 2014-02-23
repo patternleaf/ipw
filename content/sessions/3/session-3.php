@@ -1,6 +1,6 @@
 <?php 
 include('content/sessions/common.php');
-app()->setFragment('HTMLTitle', 'Intro to Web Programming: Session 3');
+app()->setFragment('HTMLTitle', 'Intro to Programming for the Web: Session 3');
 app()->setFragment('HTMLBodyAttributes', 'data-spy="scroll" data-offset="100" data-target="#sidebar-nav"');
 ob_start();
 ?>
@@ -101,15 +101,15 @@ int main() {
 					</p>
 					<figure id="c-compilation-flow" class="data-flow-diagram">
 						<ol>
-							<li><i class="icon-file icon-white"></i>C program</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-cog icon-white"></i>preprocessor</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-file icon-white"></i>processed C file</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-cog icon-white"></i>compiler</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-ok-sign icon-white"></i>program we can run</li>
+							<li><i class="glyphicon glyphicon-file icon-white"></i>C program</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-cog icon-white"></i>preprocessor</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-file icon-white"></i>processed C file</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-cog icon-white"></i>compiler</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-ok-sign icon-white"></i>program we can run</li>
 						</ol>
 					</figure>
 					<p>
@@ -134,13 +134,13 @@ echo htmlentities($f); ?></div>
 					</p>
 					<figure id="html-flow" class="data-flow-diagram">
 						<ol>
-							<li><i class="icon-file icon-white"></i>HTML file</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-cog icon-white"></i>web server</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-upload icon-white"></i>sent to internet</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-download icon-white"></i>downloaded into browser</li>
+							<li><i class="glyphicon glyphicon-file icon-white"></i>HTML file</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-cog icon-white"></i>web server</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-upload icon-white"></i>sent to internet</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-download icon-white"></i>downloaded into browser</li>
 						</ol>
 					</figure>
 					<p>
@@ -148,15 +148,15 @@ echo htmlentities($f); ?></div>
 					</p>
 					<figure id="html-flow" class="data-flow-diagram">
 						<ol>
-							<li><i class="icon-file icon-white"></i>PHP file</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li class="highlight"><i class="icon-cog icon-white"></i>PHP interpreter</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-cog icon-white"></i>web server</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-upload icon-white"></i>sent to internet</li>
-							<li class="pipe"><i class="icon-arrow-right"></i></li>
-							<li><i class="icon-download icon-white"></i>downloaded into browser</li>
+							<li><i class="glyphicon glyphicon-file icon-white"></i>PHP file</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li class="highlight"><i class="glyphicon glyphicon-cog icon-white"></i>PHP interpreter</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-cog icon-white"></i>web server</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-upload icon-white"></i>sent to internet</li>
+							<li class="pipe"><i class="glyphicon glyphicon-arrow-right"></i></li>
+							<li><i class="glyphicon glyphicon-download icon-white"></i>downloaded into browser</li>
 						</ol>
 					</figure>
 					<p>

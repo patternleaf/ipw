@@ -1,10 +1,10 @@
 <?php 
-	app()->setFragment('HTMLTitle', 'Intro to Web Programming: Sessions');
+	app()->setFragment('HTMLTitle', 'Intro to Programming for the Web: Sessions');
 	app()->setFragment('HTMLBodyAttributes', 'data-spy="scroll" data-offset="100" data-target="#sidebar-nav"');
 	ob_start();
 ?>
 	<div class="jumbotron">
-		<h1>Sessions</h1>
+		<div class="container"><h1>Sessions</h1></div>
 	</div>
 	<div class="container-fluid">
 		<div class="row-fluid">
@@ -19,15 +19,15 @@
 				<section id="session-1">
 					<div class="page-header">
 						<h1>
-							Session 1<br>
+							<a href="/sessions/1">Session 1</a><br>
 							<small>Introductions; Computers Do What You Tell Them To Do</small>
 						</h1>
 					</div>
 					<ul class="session-links">
-						<li>Deck: Introductions</li>
+						<li><a href="/decks/introductions">Deck: Introductions</a></li>
 						<li>Deck: HTML/CSS Review</li>
+						<li>Deck: Intro to Karel</li>
 						<li>Extra Reading</li>
-						<li>Resources</li>
 					</ul>
 				</section>
 				<section id="session-2">

@@ -20,7 +20,7 @@ function echoActiveClassFor($slug) {
 		<nav class="navbar-collapse collapse default-header-navbar-collapse" role="navigation">
 			<ul class="nav navbar-nav">
 				<li <?php echoActiveClassFor('sessions'); ?>><a href="/sessions">Sessions</a></li>
-				<li <?php echoActiveClassFor('topics'); ?>><a href="/topic">Topics</a></li>
+				<li <?php echoActiveClassFor('decks'); ?>><a href="/decks">Decks</a></li>
 				<li <?php echoActiveClassFor('exercises'); ?>><a href="/exercises">Exercises</a></li>
 				<li <?php echoActiveClassFor('resources'); ?>><a href="/resources">Resources</a></li>
 			</ul>
