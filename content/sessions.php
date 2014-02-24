@@ -36,7 +36,7 @@
 						<li><a href="http://learnpythonthehardway.org/book/intro.html">The Hard Way is Easier</a> (beginner programming wisdom)
 						</li>
 					</ul>
-					<h3>Homework</h3>
+					<h3><a href="/sessions/1">Homework</a></h3>
 					<ol>
 						<li>Markup Moby Dick</li>
 						<li>Style the pizza recipe</li>
