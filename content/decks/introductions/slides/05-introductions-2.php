@@ -24,7 +24,7 @@
 
 </style>
 */?>
-<div id="timeline-embed"></div>
+<div class="container" id="timeline-embed"></div>
 	<script type="text/javascript">
 	var timeline_config = {
 		width:              '100%',
