@@ -124,6 +124,16 @@ class App {
 		echo $this->getSessionWD($sessionNum);
 	}
 	
+	function printCommon($name, $options) {
+		extract($options);
+		include __DIR__.'/../templates/common/'.$name.'.php';
+	}
+	
+	function escapedFileContents($path) {
+		$f = file_get_contents($path); 
+		echo htmlentities($f);
+	}
+	
 }
 
 $gApp = NULL;

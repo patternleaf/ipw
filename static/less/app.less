@@ -1,3 +1,4 @@
+
 .jumbotron {
 	background: rgb(184,198,223); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(184,198,223,1) 0%, rgba(144,158,181,1) 100%); /* FF3.6+ */
@@ -76,6 +77,10 @@ section {
 	&:after {
 		content:"Exercise";
 		.container-tag;
+	}
+	
+	.exercise-switcher {
+		margin-bottom:1em;
 	}
 }
 	
@@ -208,7 +213,7 @@ dfn {
 }
 
 .color-highlight {
-	color: #ee2222;
+	color: #ED8600;
 }
 
 a:hover {
@@ -219,24 +224,86 @@ a:hover {
 	padding-top:0;
 }
 
-body.deck {
-
-	.navbar li {
-		padding:0;
-	}
-	.navbar-static-top {
-		margin-bottom:0;
-	}
+footer {
+	margin-top:2em;
+	padding:1em 0;
 	
-	// reset deck style here.
-	.deck-style-container {
-		@import (less) '/static/js/deck.js/themes/style/swiss.css';
+	&.footer-inverse {
+		color:#999;
+		background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+		background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+		background-repeat: repeat-x;
+		
+		a {
+			&:hover {
+				color:#eee;
+			}
+		}
 	}
 
-	.deck-container {
+	
+	p {
+		margin-bottom:0
+	}
+}
 
-		.highlight {
-			color:#ED8600;
+.diagram {
+	font-size:1.5em;
+
+	figcaption {
+		font-size:.7em;
+		color:#555;
+	}
+}
+
+
+.img-attribution {
+	font-size:.8em;
+}
+
+.token {
+	font-family: 'Consolas', 'source-code-pro', monospace !important;
+	&.tag {
+		color:#77BAA3;
+		&.inverse { background:#77BAA3 }
+	}
+	&.css {
+		color:#8677BA;
+		&.inverse { background:#8677BA }
+	}
+	&.attribute {
+		color:#B377BA;
+		&.inverse { background:#B377BA }
+	}
+	&.selector {
+		color:#77BAA7;
+		&.inverse { background:#77BAA7 }
+	}
+	&.css-property {
+		color:#F2C457;
+		&.inverse { background:#F2C457 }
+	}
+	&.css-value {
+		color:#50D985;
+		&.inverse { background:#50D985 }
+	}
+
+	&.inverse {
+		color:white;
+		border-radius:0.3em;
+	}
+}
+
+// explicit overrides for deck blahs
+body.deck .deck-style-container {
+	blockquote {
+		p {
+			margin-bottom:.8em;
 		}
+	}
+	.live-exercise, .live-example {
+		padding-top:2em;
 	}
 }

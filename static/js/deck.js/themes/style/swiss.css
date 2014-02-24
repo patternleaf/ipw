@@ -74,7 +74,7 @@ select, input, textarea, button {
 }
 
 pre, code, kbd, samp {
-  font-family: monospace, sans-serif;
+  font-family: 'Consolas', 'source-code-pro', monospace !important;
 }
 
 a {

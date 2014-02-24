@@ -1,0 +1,94 @@
+{
+	"timeline":
+	{
+		"headline":"The Life and Times of Eric Miller",
+		"type":"default",
+		"text":"<p>A retrospective.</p>",
+		"date": [
+			{
+				"startDate":"1995,09",
+				"endDate":"2000,05",
+				"headline":"Stanford",
+				"text":"<a href=\"http://stanford.edu\">Stanford</a> BS in <a href=\"http://symsys.stanford.edu\">Symbolic Systems</a>. Minor in <a href=\"https://ccrma.stanford.edu\">MST</a>.",
+				"asset": {
+					"media":"http://www.stanford.edu/group/armyrotc/imgs/stanfordoval.jpg"
+				}
+			},
+			{
+				"startDate":"1999,03,29",
+				"headline":"Dow Jones Industrial average topped the 10,000 mark."
+			},
+			{
+				"startDate":"2000,05",
+				"endDate":"2003,08",
+				"headline":"Digidesign",
+				"text":"<a href=\"http://www.avid.com/US/resources/digi-orientation\">Digidesign/Avid: ProTools</a>.",
+				"asset": {
+					"media":"http://upload.wikimedia.org/wikipedia/commons/9/95/Com_DigidesignProfile.jpg"
+				}
+			},
+			{
+				"startDate":"2001,09,11",
+				"headline":"Terrorists attack World Trade Center and the Pentagon."
+			},
+			{
+				"startDate":"2003,08",
+				"endDate":"2007,05",
+				"headline":"Master of Architecture",
+				"text":"CU Denver: <a href=\"http://www.ucdenver.edu/academics/colleges/ArchitecturePlanning/Academics/DegreePrograms/MArch/Pages/MArch.aspx\">M.Arch</a>.",
+				"asset": {
+					"media":"http://www.stardust.com/mm5/graphics/00000001/modern-architecture-edmonds-lee1.jpg"
+				}
+			},
+			{
+				"startDate":"2006,11,07",
+				"headline":"California Governor Arnold Schwarzenegger won a second term.",
+				"text":"Voters in six states approved ballot measures raising the minimum wage, joining 18 other states in setting a wage higher than the federal mark of $5.15 an hour."
+			},
+			{
+				"startDate":"2007,05",
+				"endDate":"2010,08",
+				"headline":"Crowd Favorite",
+				"text":"Employee #1 and Sr. Developer at <a href=\"http://crowdfavorite.com\">Crowd Favorite</a>.",
+				"asset": {
+					"media":"http://media.cdn.builtincolorado.com/sites/www.builtincolorado.com/files/imagecache/Medium/crowd-favorite-logo.jpg"
+				}
+			},
+			{
+				"startDate":"2010,08",
+				"endDate":"2012,02",
+				"headline":"Sifteo",
+				"text":"Software Engineer at <a href=\"http://sifteo.com\">Sifteo</a>.",
+				"asset": {
+					"media":"http://gil.poly.edu/wp-content/uploads/2013/02/sifteo_cubits_02_610x407.jpg"
+				}
+			},
+			{
+				"startDate":"2004,08",
+				"endDate":"2014,02",
+				"headline":"patternleaf",
+				"text":"Doing <a href=\"http://patternleaf.com/work\">things</a> as <a href=\"http://patternleaf.com\">patternleaf</a>.",
+				"asset": {
+					"media":"http://patternleaf.com/img/logo-orange.png"
+				}
+			},
+			{
+				"startDate":"2013,11",
+				"endDate":"2014,02",
+				"headline":"CTO at Gravy Plane",
+				"text":"Our first mobile app is <a href=\"http://gravyplane.net/squashable\">Squashable</a>.",
+				"asset": {
+					"media":"http://gravyplane.net/wp-content/uploads/2013/12/gravyplanead-289x300.png"
+				}
+			},
+			{
+				"startDate":"2014,02",
+				"endDate":"2014,02",
+				"headline":"App Developer at Inspiring Apps",
+				"asset": {
+					"media":"http://www.inspiringapps.com//images/main-logo2x.png"
+				}
+			}
+		]
+    }
+}

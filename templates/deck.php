@@ -39,18 +39,9 @@
 		<link rel="stylesheet" href="/css/styles.css" type="text/css">
 	<?php endif; ?>
 
-	<!-- prettyprint -->
-	<link href="<?php echo STATIC_URL; ?>js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
-	<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/google-code-prettify/prettify.js"></script>
-	
 </head>
 <body class="deck">
 	<?php
-	function echoActiveClassFor($slug) {
-		if ($slug == app()->getCurrentPathSlug()) {
-			echo 'class="active"';
-		}
-	}
 	?>
 	
 	<div class="navbar navbar-inverse navbar-static-top">
@@ -99,7 +90,14 @@
 		if (is_array($next_deck) && !empty($next_deck)) {
 			echo '
 				<section class="slide">
-					<h1>Next Deck: <a href="'.$next_deck['url'].'">'.$next_deck['title'].'</a><i class="glyphicon glyphicon-right-arrow"></i></h1>
+					<h1>
+						Next Deck<br>
+						<small>
+							<a href="'.$next_deck['url'].'">'.$next_deck['title'].' <span class="glyphicon glyphicon-circle-arrow-right"></span>
+							</a>
+						</small>
+					</h1>
+
 				</section>
 			';
 		}
@@ -148,13 +146,92 @@
 	<script src="<?php echo STATIC_URL; ?>js/deck.js/extensions/status/deck.status.js"></script>
 	<script src="<?php echo STATIC_URL; ?>js/deck.js/extensions/navigation/deck.navigation.js"></script>
 	<script src="<?php echo STATIC_URL; ?>js/deck.js/extensions/scale/deck.scale.js"></script>
+	
+	<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/ace/ace.js"></script>
 
 	<!-- Initialize the deck. You can put this in an external file if desired. -->
 	<script>
 		$(function() {
 			$.deck('.slide');
-			prettyPrint();
+
+			$('.answer-container').click(function() {
+				$(this).toggleClass('revealed').children().slideToggle();
+			});
 			
+			$('.pretty-code').each(function() {
+				var $input = $(this);
+				var inputId = $input.attr('id');
+				var editor = ace.edit(inputId);
+				editor.setTheme("ace/theme/xcode");
+				var lang = $(this).data('language') || 'javascript';
+				editor.getSession().setMode("ace/mode/" + lang);
+				editor.setBehavioursEnabled(false);
+				$input.data('editor', editor);
+				if ($(this).hasClass('non-editable')) {
+					editor.setReadOnly(true);
+				}
+			});
+		
+			$('.line-highlighter').each(function() {
+				$(this).on('click', function() {
+					var $target = $('#' + $(this).data('target'));
+					if ($target.length) {
+						var editor = $target.data('editor');
+						editor.gotoLine($(this).data('line'));
+					}
+					return false;
+				});
+			});
+			
+			/* exercise stuff */
+			
+			$('.live-exercise').each(function() {
+				var $exercise = $(this);
+				var $userCode = $exercise.find('.user-code');
+				var $solutionCode = $exercise.find('.solution-code')
+				var $target = $exercise.find('.output-target');
+				
+				var updateOutput = function() {
+					if ($target.length) {
+						var editor = $exercise.data('active-code').data('editor');
+						if (editor) {
+							$target.contents().find('html').html(editor.getValue());
+						}
+					}
+				};
+				
+				$exercise.data('active-code', $userCode);
+				$exercise.find('button.switcher-user').addClass('active');
+				$exercise.find('.exercise-switcher').on('click', 'button', function(event) {
+					if ($(event.target).hasClass('switcher-user')) {
+						$solutionCode.hide();
+						$userCode.show();
+						$exercise.data('active-code', $userCode);
+						updateOutput();
+					}
+					else {
+						$userCode.hide();
+						$solutionCode.show();
+						$exercise.data('active-code', $solutionCode);
+						updateOutput();
+					}
+					$exercise.find('button').removeClass('active');
+					$(event.target).addClass('active');
+				});
+				$solutionCode.hide();
+				if ($target.length) {
+					$exercise.find('.pretty-code').each(function() {
+						var editor = $(this).data('editor');
+						if (editor) {
+							editor.on('change', updateOutput);
+						}
+					});
+					updateOutput();
+				}
+			});
+			
+			
+			/* resize deck to account for bootstrap header */
 			var sizeDeckContainer = function() {
 				$('.deck-container').css('min-height', $(window).innerHeight() - $('.navbar-static-top').outerHeight());
 				console.log($(window).innerHeight() - $('.navbar-static-top').outerHeight());
@@ -164,6 +241,7 @@
 			sizeDeckContainer();
 		});
 	</script>
+	<?php app()->renderFragment('HTMLBodyTail'); ?>
 </body>
 </html>
 <?php app()->setFragment('HTMLPage', ob_get_clean()); ?>

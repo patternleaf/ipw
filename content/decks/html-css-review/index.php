@@ -4,4 +4,8 @@
 		'title' => 'Intro to Karel',
 		'url' => 'intro-to-karel'
 	);
+	
+// 	app()->appendTo('HTMLHeadAdditions', '
+// <link rel="stylesheet" type="text/css" href="http://cdn.knightlab.com/libs/timeline/latest/css/timeline.css">
+// 	');
 ?>

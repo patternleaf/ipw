@@ -1,8 +1,7 @@
 <?php ob_start(); ?>
-<hr>
 
-<footer>
-	<p>&copy; 2014 patternleaf</p>
+<footer class="footer-inverse">
+	<div class="container"><p>&copy; 2014 <a href="http://patternleaf.com">patternleaf</a></p></div>
 </footer>
 
 <?php app()->setFragment('HTMLBodyFooter', ob_get_clean()); ?>
