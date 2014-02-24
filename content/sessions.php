@@ -20,16 +20,29 @@
 					<div class="page-header">
 						<h1>
 							<a href="/sessions/1">Session 1</a><br>
-							<small>Introductions; Computers Do What You Tell Them To Do</small>
+							<small>Introductions; HTML/CSS Review</small>
 						</h1>
 					</div>
+					<h3>Decks</h3>
 					<ul class="session-links">
 						<li><a href="/decks/introductions">Deck: Introductions</a></li>
 						<li><a href="/decks/environment-setup">Deck: Environment Setup</a></li>
-						<li><a href="/decks/intro-to-karel">Deck: Intro to Karel</a></li>
-						<li><a href="/sessions/1">Extra Reading</a></li>
+						<li><a href="/decks/html-css-review">Deck: HTML/CSS Review</a></li>
 					</ul>
+					<h3>Reading</h3>
+					<ul>
+						<li><a href="http://programmers.stackexchange.com/a/46760">Things to know and look for before making your site public</a> on Stack Overflow.
+						</li>
+						<li><a href="http://learnpythonthehardway.org/book/intro.html">The Hard Way is Easier</a> (beginner programming wisdom)
+						</li>
+					</ul>
+					<h3>Homework</h3>
+					<ol>
+						<li>Markup Moby Dick</li>
+						<li>Style the pizza recipe</li>
+					</ol>
 				</section>
+				
 				<section id="session-2">
 					<div class="page-header">
 						<h1>Session 2</h1>
