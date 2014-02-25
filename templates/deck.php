@@ -79,6 +79,19 @@
 			$slides_dir = '/slides';
 		}
 		$dir = new DirectoryIterator($slides_dir);
+		$filenames = array();
+		foreach ($dir as $fileinfo) {
+			if (!$fileinfo->isDot() && !$fileinfo->isDir() && !(strpos($fileinfo->getFilename(), '.') == 0)) {
+				$filenames[] = $fileinfo->getFilename();
+			}
+		}
+		natsort($filenames);
+		foreach ($filenames as $name) {
+			echo '<section class="slide"><!--'.$name.'-->';
+			include $slides_dir.'/'.$name;
+			echo '</section>';
+		}
+		/*
 		foreach ($dir as $fileinfo) {
 			if (!$fileinfo->isDot() && !$fileinfo->isDir() && !(strpos($fileinfo->getFilename(), '.') == 0)) {
 				echo '<section class="slide"><!--'.$fileinfo->getFilename().'-->';
@@ -86,6 +99,7 @@
 				echo '</section>';
 		    }
 		}
+		*/
 
 		if (is_array($next_deck) && !empty($next_deck)) {
 			echo '
