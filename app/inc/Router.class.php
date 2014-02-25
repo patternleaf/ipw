@@ -31,6 +31,9 @@ class Router {
 			'includes' => array()
 		);
 		
+		// discard multiple slashes
+		$path = preg_replace('/(\/+)/', '/', $path);
+		
 		foreach ($this->routes as $pattern => $response) {
 			$matches = array();
 			if (preg_match($pattern, $path, $matches)) {

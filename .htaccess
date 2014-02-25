@@ -8,7 +8,9 @@ RewriteRule ^index\.php$ - [L]
 # check to see if a file under /content/ matches. 
 # if so, deliver that. we do not allow directory listings--
 # those will be handled by the app router.
-RewriteCond %{DOCUMENT_ROOT}/content/$1 -f
+RewriteCond %{DOCUMENT_ROOT}/content/$1 -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/content/$1/index.php -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/content/$1/index.html -f
 RewriteRule ^(.*)$ /content/$1 [L,QSA]
 
 # otherwise, if the bare request is neither file
