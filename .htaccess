@@ -2,12 +2,18 @@
 RewriteEngine On
 RewriteBase /
 
+# pass through requests to index
 RewriteRule ^index\.php$ - [L]
 
-# if the request resolves to a file in content/
-RewriteCond ^content/(.*)$ -f
-RewriteRule . content/%1 [L]
+# check to see if a file under /content/ matches. 
+# if so, deliver that. we do not allow directory listings--
+# those will be handled by the app router.
+RewriteCond %{DOCUMENT_ROOT}/content/$1 -f
+RewriteRule ^(.*)$ /content/$1 [L,QSA]
 
+# otherwise, if the bare request is neither file
+# nor directory, rewrite to index and let the app 
+# router handle it.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.php [L]

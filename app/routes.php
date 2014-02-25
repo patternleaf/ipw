@@ -6,7 +6,6 @@ router()->set(array(
 	'/^\/classes\/?$/' 					=> array('includes' => 'content/sessions.php'),
 	'/^\/sessions\/?$/' 				=> array('includes' => 'content/sessions.php'),
 	'/^\/sessions\/([\d])\/?$/' 		=> array('includes' => 'content/sessions/$1/session-$1.php'),
-	'/^\/sessions\/([\d])\/(.*)$/' 		=> array('includes' => 'content/sessions/$1/$2', 'templates' => array()),
 	'/^\/decks\/?$/' 					=> array('includes' => 'content/decks.php'),
 	'/^\/decks\/(.*)\/?$/' 				=> array('includes' => 'content/decks/$1/index.php', 'templates' => array('templates/deck.php')),
 	'/^\/resources\/?$/' 				=> array('includes' => 'content/resources.php'),

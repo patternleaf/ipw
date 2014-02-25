@@ -34,8 +34,9 @@ class Router {
 		foreach ($this->routes as $pattern => $response) {
 			$matches = array();
 			if (preg_match($pattern, $path, $matches)) {
+				// $i = 0;
 				// foreach ($matches as $m) {
-				// 	error_log('match: '.$m);
+				// 	error_log('match '.$i++.': '.$m);
 				// }
 				$files = $response['includes'];
 				if (is_string($files)) {
