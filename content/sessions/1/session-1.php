@@ -51,7 +51,7 @@ ob_start();
 					<h3>Moby Dick</h3>
 					<ol>
 						<li>
-							Download <a href="1/moby-dick-edited.txt">this plain text file</a>, make it accessible from your server, and turn it into an HTML5 document. You might look at <a href="http://www.sitepoint.com/a-basic-html5-template/">an HTML template</a> as a starting point.
+							Download <a href="moby-dick-edited.txt">this plain text file</a>, make it accessible from your server, and turn it into an HTML5 document. You might look at <a href="http://www.sitepoint.com/a-basic-html5-template/">an HTML template</a> as a starting point.
 						</li>
 						<li>
 							Mark it up as you see fit based on the semantics of HTML5 tags. Refer to the <a href="http://joshduck.com/periodic-table.html">Periodic Table of the Elements</a> of whatever source you prefer. 

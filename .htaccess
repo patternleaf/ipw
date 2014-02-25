@@ -11,6 +11,7 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{DOCUMENT_ROOT}/content/$1 -f [OR]
 RewriteCond %{DOCUMENT_ROOT}/content/$1/index.php -f [OR]
 RewriteCond %{DOCUMENT_ROOT}/content/$1/index.html -f
+RewriteCond %{DOCUMENT_ROOT}/content/$1 !-d
 RewriteRule ^(.*)$ /content/$1 [L,QSA]
 
 # otherwise, if the bare request is neither file
