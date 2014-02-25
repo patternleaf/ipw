@@ -12,5 +12,5 @@ router()->set(array(
 	'/^\/contact\/?$/' 					=> array('includes' => 'content/contact.php'),
 	'/^\/about\/?$/' 					=> array('includes' => 'content/about.php'),
 	'/^\/exercises\/?$/' 				=> array('includes' => 'content/exercises.php'),
-	'/^.*$/' 							=> array('includes' => 'content/404.php'),
+	'/^.*$/' 							=> array('includes' => 'content/404.php', 'code' => 404),
 ));

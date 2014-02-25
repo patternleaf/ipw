@@ -3,15 +3,19 @@
 class Router {
 	
 	private $routes;
+	private $fourOhFour;
 	
 	function __construct() {
-		$routes = array();
+		$this->routes = array();
 	}
 	
 	function set($key, $value = NULL) {
 		if (is_array($key)) {
 			foreach ($key as $k => $v) {
 				$this->routes[$k] = $v;
+				if (isset($v['code']) && $v['code'] == 404) {
+					$this->fourOhFour = $v;
+				}
 			}
 		}
 		else {
@@ -24,6 +28,17 @@ class Router {
 			return $this->routes[$key];
 		}
 		return $this->routes;
+	}
+	
+	function load404() {
+		$result = array(
+			'includes' => array(),
+			'code' => 404
+		);
+		if ($this->fourOhFour) {
+			$result['includes'][] = $this->fourOhFour['includes'];
+		}
+		return $result;
 	}
 
 	function load($path) {

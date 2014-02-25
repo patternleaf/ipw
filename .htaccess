@@ -5,6 +5,13 @@ RewriteBase /
 # pass through requests to index
 RewriteRule ^index\.php$ - [L]
 
+# ensure any non-file URL ends with a slash so that
+# relative URLs resolve correctly.
+# there is probably a better way to do this. :(
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d [OR]
+RewriteCond %{DOCUMENT_ROOT}/content%{REQUEST_URI} -d
+RewriteRule (.*)[^\/]$ $0/ [R=301,L]
+
 # check to see if a file under /content/ matches. 
 # if so, deliver that. we do not allow directory listings--
 # those will be handled by the app router.
