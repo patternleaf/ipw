@@ -6,57 +6,115 @@
 	<div class="jumbotron">
 		<div class="container"><h1>Sessions</h1></div>
 	</div>
-	<div class="container-fluid">
-		<div class="row-fluid">
+	<div class="container">
+		<div class="row">
 			<div class="col-md-3">
-				<ul class="nav nav-tabs nav-stacked affix" id="sidebar-nav">
+				<ul class="nav nav-tabs nav-stacked" id="sidebar-nav">
 					<li><a href="#session-1">Session 1</a></li>
 					<li><a href="#session-2">Session 2</a></li>
 					<li><a href="#session-3">Session 3</a></li>
+					<li><a href="#session-4">Session 4</a></li>
+					<li><a href="#session-5">Session 5</a></li>
+					<li><a href="#session-6">Session 6</a></li>
+					<li><a href="#session-7">Session 7</a></li>
+					<li><a href="#session-8">Session 8</a></li>
+					<li><a href="#session-9">Session 9</a></li>
+					<li><a href="#session-10">Session 10</a></li>
 				</ul>
 			</div>
-			<div class="col-md-9">
+			<div class="col-md-9 session-list">
 				<section id="session-1">
-					<div class="page-header">
-						<h1>
-							<a href="/sessions/1">Session 1</a><br>
-							<small>Introductions; HTML/CSS Review</small>
-						</h1>
-					</div>
-					<h3>Decks</h3>
-					<ul class="session-links">
-						<li><a href="/decks/introductions">Deck: Introductions</a></li>
-						<li><a href="/decks/environment-setup">Deck: Environment Setup</a></li>
-						<li><a href="/decks/html-css-review">Deck: HTML/CSS Review</a></li>
-					</ul>
-					<h3>Reading</h3>
-					<ul>
-						<li><a href="http://programmers.stackexchange.com/a/46760">Things to know and look for before making your site public</a> on Stack Overflow.
-						</li>
-						<li><a href="http://learnpythonthehardway.org/book/intro.html">The Hard Way is Easier</a> (beginner programming wisdom)
-						</li>
-					</ul>
-					<h3><a href="/sessions/1">Homework</a></h3>
-					<ol>
-						<li>Markup Moby Dick</li>
-						<li>Style the pizza recipe</li>
-					</ol>
+					<h1>
+						<a href="/sessions/1">Session 1</a><br>
+						<small>Introductions; HTML/CSS Review</small>
+						<a class="btn btn-default" href="/sessions/1" role="button">Go &raquo;</a>
+					</h1>
+					<p>
+						Presentation vs content. Environment setup.
+					</p>
 				</section>
-				
 				<section id="session-2">
-					<div class="page-header">
-						<h1>Session 2</h1>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<h1>
+						Session 2<br>
+						<small>Intro to Procedural Programming</small>
+					</h1>
+
+					<p>
+						Karel the Robot. Decomposition, abstraction, thinking like a programmer.
+					</p>
 				</section>
 				<section id="session-3">
-					<div class="page-header">
-						<h1>Session 3</h1>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<h1>
+						Session 3<br>
+						<small>PHP, JavaScript; Client/Server</small>
+					</h1>
+
+					<p>
+						Continued concepts in procedural programming. Forms and PHP. Simple guestbook.
+					</p>
+				</section>
+				<section id="session-4">
+
+					<h1>
+						Session 4<br>
+						<small>Validation/Sanitization; Basic Error Handling; Data Stores</small>
+					</h1>
+
+					<p>
+						Data formats, error conditions. JSON-based Guestbook.
+					</p>
+				</section>
+				<section id="session-5">
+
+					<h1>
+						Session 5<br>
+						<small>Personal Project Kick-off; mySQL</small>
+					</h1>
+					<p>
+						mySQL-based Guestbook.
+					</p>
+				</section>
+				<section id="session-6">
+
+					<h1>
+						Session 6<br>
+						<small>Object-Oriented Programming; jQuery; WordPress</small>
+					</h1>
+					<p>
+						Paginated Guestbook. WordPress installation and configuration. Make a child theme.
+					</p>
+				</section>
+				<section id="session-7">
+					<h1>
+						Session 7<br>
+						<small>APIs; The RESTful Web; CRUD; WordPress Hooks</small>
+					</h1>
+					<p>
+						RESTful guestbook. WordPress plugins and themes.
+					</p>
+				</section>
+				<section id="session-8">
+					<h1>
+						Session 8<br>
+						<small>MVC; Asynch Communication</small>
+					</h1>
+					<p>
+						Asynch guestbook. Topics in WordPress/jQuery.
+					</p>
+				</section>
+				<section id="session-9">
+					<h1>
+						Session 9<br>
+						<small>Advanced Topics; Project Workshop</small>
+					</h1>
+				</section>
+				<section id="session-10">
+					<h1>
+						Session 10<br>
+						<small>More Advanced Topics; Project Presentations</small>
+					</h1>
 				</section>
 
 			</div>
@@ -67,7 +125,33 @@ app()->setFragment('HTMLBodyContent', ob_get_clean());
 app()->appendTo('HTMLBodyTail', '
 	<script type="text/javascript" charset="utf-8">
 		$(\'body\').scrollspy();
+		// cause bootstrap\'s affix kinda sucks
+		var sidebarOrigin = $(\'#sidebar-nav\').offset().top;
+		$(window).scroll(function() {
+			var $window = $(window);
+			if ($window.scrollTop() > sidebarOrigin - 80) {
+				$(\'#sidebar-nav\').addClass(\'affixed\');
+			}
+			else {
+				$(\'#sidebar-nav\').removeClass(\'affixed\');
+			}
+		});
+		
 	</script>
+	
+');
+
+app()->appendTo('HTMLHeadAdditions', '
+	<style type="text/css" media="screen">
+		.session-list section {
+			border-top:1px solid #ddd;
+			padding:.5em 1em 3em;
+			margin:0;
+		}
+		.session-list section:nth-child(even) {
+			background:#f8f8f8;
+		}
+	</style>
 ');
 
 ?>

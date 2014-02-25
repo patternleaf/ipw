@@ -10,7 +10,7 @@ ob_start();
 			<div class="col-md-6">
 				<h2>HTML5</h2>
 				<ul>
-					<li><a href="http://www.w3.org/html/wg/drafts/html/master/Overview.html#contents">The spec</a></li>
+					<li><a href="http://developers.whatwg.org">WHATWG standards for developers</a></li>
 					<li><a href="http://joshduck.com/periodic-table.html">Periodic Table of the Elements</a></li>
 				</ul>
 
@@ -22,6 +22,7 @@ ob_start();
 				<h2>JavaScript</h2>
 				<ul>
 					<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN JavaScript reference</a></li>
+					<li><a href="http://nodeguide.com/style.html">A style guide for JavaScript</a>. I agree with most of it.</li>
 				</ul>
 				<h2>PHP</h2>
 				<ul>
