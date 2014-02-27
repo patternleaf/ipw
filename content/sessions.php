@@ -36,7 +36,7 @@
 				<section id="session-2">
 
 					<h1>
-						<a href="1">Session 2</a><br>
+						<a href="2">Session 2</a><br>
 						<small>Intro to Procedural Programming</small>
 					</h1>
 
