@@ -3,7 +3,7 @@
 	<div class="row">
 		<ul>
 			<li>Switch to using your own servers.</li>
-			<li><a href="karel-exercises/karel-standalone-v1.zip">Download the karel standalone package</a>.</li>
+			<li><a href="/sessions/2/karel-standalone-v1.zip">Download the karel standalone package</a>.</li>
 			<li>Let's get that running.</li>
 			<li>Should look like <a href="/sessions/2/karel-standalone-v1/index.php">this</a>.</li>
 		</ul>
