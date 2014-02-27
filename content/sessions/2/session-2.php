@@ -47,9 +47,11 @@ ob_start();
 				<section class="section" id="materials">
 					<h1>Materials</h1>
 					<div class="row">
-
 						<p>
 							Download the <a href="karel-standalone-v1.zip">Karel Standalone Package</a>. Unpack it and serve it from your server. The index.php file should load out of the box without errors. <strong>If it doesn't, let me know!</strong> Don't spend time debugging problems you shouldn't have to solve.
+						</p>
+						<p>
+							Supplemental: the old keynote slides <a href="class-2.pdf">can be downloaded here [pdf]</a>. The currently available deck doesn't go far enough. :(
 						</p>
 					</div>
 				</section>
