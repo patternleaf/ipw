@@ -1,11 +1,14 @@
 <?php
 if (empty($options)) {
 	$options = array(
+		'instance_id' => '',
 		'container_attributes' => 'has-solution',
 		'height' => '200px',
 		'source_path' => '',
 		'solution_path' => '',
 		'language' => 'html',
+		'output_markup' => '',
+		'eval_button_markup' => '',
 		'prompt' => ''
 	);
 }
@@ -15,7 +18,7 @@ foreach ($options as $key => $value) {
 	}
 }
 ?>
-<div class="live-exercise container interactive <?php echo $container_attributes; ?>">
+<div class="live-exercise container interactive <?php echo $container_attributes; ?>" id="<?php echo $instance_id; ?>">
 	<div class="row">
 		<p class="col-md-10">
 			<?php echo $prompt; ?>
@@ -31,10 +34,11 @@ foreach ($options as $key => $value) {
 	
 	<div class="row">
 		<div class="code-container col-md-6" style="">
-			<div id="<?php echo $editor_id; ?>-code" data-language="<?php echo $language ?>" class="pretty-code user-code" style="height:<?php echo $height ?>; width:100%;"><?php app()->escapedFileContents($source_path); ?></div>
+			<div id="<?php echo $instance_id; ?>-code" data-language="<?php echo $language ?>" class="pretty-code user-code" style="height:<?php echo $height ?>; width:100%;"><?php if(!empty($source_path)) app()->escapedFileContents($source_path); ?></div>
 			
 <?php if (isset($solution_path) && !empty($solution_path)) : ?>
-			<div id="<?php echo $editor_id; ?>-solution" data-language="<?php echo $language ?>" class="pretty-code solution-code" style="height:<?php echo $height ?>; width:100%;"><?php app()->escapedFileContents($solution_path); ?></div>
+			<div id="<?php echo $instance_id; ?>-solution" data-language="<?php echo $language ?>" class="pretty-code solution-code" style="height:<?php echo $height ?>; width:100%;"><?php app()->escapedFileContents($solution_path); ?></div>
+			<?php echo $eval_button_markup; ?>
 		</div>
 <?php endif; ?>
 
@@ -43,7 +47,7 @@ foreach ($options as $key => $value) {
 		</div>
 		<div class="output-container col-md-5">
 			<div class="exercise-output well" style="height:<?php echo $height ?>;">
-				<iframe seamless class="output-target" style="width:100%; height:100%;"></iframe>
+				<?php echo $output_markup; ?>
 			</div>
 		</div>
 	</div>

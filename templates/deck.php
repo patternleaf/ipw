@@ -160,6 +160,7 @@
 	<script src="<?php echo STATIC_URL; ?>js/deck.js/extensions/status/deck.status.js"></script>
 	<script src="<?php echo STATIC_URL; ?>js/deck.js/extensions/navigation/deck.navigation.js"></script>
 	<script src="<?php echo STATIC_URL; ?>js/deck.js/extensions/scale/deck.scale.js"></script>
+	<script src="<?php echo STATIC_URL; ?>js/jquery.scrollTo.min.js"></script>
 	
 	<script type="text/javascript" src="<?php echo STATIC_URL; ?>js/ace/ace.js"></script>
 
@@ -206,7 +207,8 @@
 				var $target = $exercise.find('.output-target');
 				
 				var updateOutput = function() {
-					if ($target.length) {
+					// @TODO: checking for iframe is lame.
+					if ($target.length && $target.prop('nodeName').toLowerCase() == 'iframe') {
 						var editor = $exercise.data('active-code').data('editor');
 						if (editor) {
 							$target.contents().find('html').html(editor.getValue());
@@ -248,11 +250,31 @@
 			/* resize deck to account for bootstrap header */
 			var sizeDeckContainer = function() {
 				$('.deck-container').css('min-height', $(window).innerHeight() - $('.navbar-static-top').outerHeight());
-				console.log($(window).innerHeight() - $('.navbar-static-top').outerHeight());
+				//console.log($(window).innerHeight() - $('.navbar-static-top').outerHeight());
 			};
 			
 			$(window).on('resize', sizeDeckContainer);
 			sizeDeckContainer();
+			
+			$(document).on('deck.change', function(event, from, to) {
+				var $targetSlide = $.deck('getSlide', to);
+				var $scaledSlide = $targetSlide;
+				
+				// get top-level slide containing this one.
+				var $parentSlides = $targetSlide.parents('.slide');
+				if ($parentSlides.length) {
+					$scaledSlide = $parentSlides.eq($parentSlides.length - 1);
+				}
+				if ($scaledSlide.find('.pretty-code').length || $scaledSlide.hasClass('no-scale')) {
+					$.deck('disableScale');
+					// if we're not scaled, we may need to scroll to the slide.
+					$scaledSlide.parents('.deck-container').scrollTo({ top: $targetSlide.position().top, left: 0 }, 800);
+				}
+				else {
+					$.deck('enableScale');
+				}
+			});
+			
 		});
 	</script>
 	<?php app()->renderFragment('HTMLBodyTail'); ?>

@@ -25,7 +25,7 @@
 			<div class="col-md-9 session-list">
 				<section id="session-1">
 					<h1>
-						<a href="/sessions/1">Session 1</a><br>
+						<a href="1">Session 1</a><br>
 						<small>Introductions; HTML/CSS Review</small>
 						<a class="btn btn-default" href="/sessions/1" role="button">Go &raquo;</a>
 					</h1>
@@ -36,7 +36,7 @@
 				<section id="session-2">
 
 					<h1>
-						Session 2<br>
+						<a href="1">Session 2</a><br>
 						<small>Intro to Procedural Programming</small>
 					</h1>
 

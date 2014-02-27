@@ -18,6 +18,9 @@ RewriteRule (.*)[^\/]$ $0/ [R=301,L]
 RewriteCond %{DOCUMENT_ROOT}/content/$1 -f [OR]
 RewriteCond %{DOCUMENT_ROOT}/content/$1/index.php -f [OR]
 RewriteCond %{DOCUMENT_ROOT}/content/$1/index.html -f
+# todo: what this really wants to be is "does the app router not handle it?" 
+# which isn't possible. :(. for now, this prevents a dir request from showing 
+# its index.html or index.php.
 RewriteCond %{DOCUMENT_ROOT}/content/$1 !-d
 RewriteRule ^(.*)$ /content/$1 [L,QSA]
 
