@@ -22,17 +22,17 @@
 			this.body = new Romano.Sprite('gir-body', viewport, new Romano.RaphaelRenderer(), {
 				position: { x: -20, y: 0 }
 			});
-			this.body.getRenderer().setSource(location.href + 'js/karel/images/gir-body.svg');
+			this.body.getRenderer().setSource('js/karel/images/gir-body.svg');
 			this.head = new Romano.Sprite('gir-head', viewport, new Romano.RaphaelRenderer(), {
 				position: { x: -20, y: -60 },
 				rotationCenter: { x: 25, y: 50 }
 			});
-			this.head.getRenderer().setSource(location.href + 'js/karel/images/gir-head.svg');
+			this.head.getRenderer().setSource('js/karel/images/gir-head.svg');
 			this.leftJet = new Romano.Sprite('gir-left-jet', viewport, new Romano.RaphaelRenderer(), {
 				position: { x: -20, y: 56 },
 				rotationCenter: { x: 0, y: 0 }
 			});
-			this.leftJet.getRenderer().setSource(location.href + 'js/karel/images/flame-1.svg', function(sprite) {
+			this.leftJet.getRenderer().setSource('js/karel/images/flame-1.svg', function(sprite) {
 				sprite.setRotationCenter(0, 0);
 				sprite.setScale(1, 0);
 			});
@@ -41,7 +41,7 @@
 				position: { x: -2, y: 58 }, 
 				rotationCenter: { x: 0, y: 0 }
 			});
-			this.rightJet.getRenderer().setSource(location.href + 'js/karel/images/flame-1.svg', function(sprite) {
+			this.rightJet.getRenderer().setSource('js/karel/images/flame-1.svg', function(sprite) {
 				sprite.setRotationCenter(0, 0);
 				sprite.setScale(1, 0);
 			});

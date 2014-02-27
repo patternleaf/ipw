@@ -49,7 +49,7 @@ ob_start();
 					<div class="row">
 
 						<p>
-							Download the <a href="/decks/intro-to-procedural/karel-exercises/karel-standalone-v1.zip">Karel Standalone Package</a>. Unpack it and serve it from your server. The index.php file should load out of the box without errors. <strong>If it doesn't, let me know!</strong> Don't spend time debugging problems you shouldn't have to solve.
+							Download the <a href="karel-standalone-v1.zip">Karel Standalone Package</a>. Unpack it and serve it from your server. The index.php file should load out of the box without errors. <strong>If it doesn't, let me know!</strong> Don't spend time debugging problems you shouldn't have to solve.
 						</p>
 					</div>
 				</section>

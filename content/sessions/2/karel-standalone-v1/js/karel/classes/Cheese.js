@@ -17,7 +17,7 @@
 				new Romano.RaphaelRenderer(),
 				$.extend(defaultState, (initialState || {}))
 			);
-			this.renderer.setSource(location.href + 'js/karel/images/cheese.svg');
+			this.renderer.setSource('js/karel/images/cheese.svg');
 			$(this).bind('endFrame', this.onEndFrame._plBind(this));
 		},
 
