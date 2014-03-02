@@ -84,7 +84,7 @@ ob_start();
 					</p>
 
 					<p>
-						Your job is to add CSS to this page such that it looks like the comps. **You should not need to change the markup** to achieve the desired look. 
+						Your job is to add CSS to this page such that it looks like the comps. <strong>You should not need to change the markup</strong> to achieve the desired look. 
 					</p>
 
 					<ol>
@@ -92,6 +92,9 @@ ob_start();
 						<li>Note that some elements have ids and there are a couple of classes. Those can be used to good effect via CSS selectors.</li>
 						<li>
 							There are probably a few different ways to achieve the look. The solution I picked involves the following CSS properties: <code>width, margin, border, border-bottom, padding, clear, background-color, float, display</code>
+						</li>
+						<li>
+							Don't worry if the 7 in step 7 is rendered over the image. The comps were screenshots from Firefox which renders differently than WebKit (Safari and Chrome).
 						</li>
 						<li>
 							There's a place in the header with a note "YOUR CSS GOES IN HERE". Your CSS goes in there. :)
