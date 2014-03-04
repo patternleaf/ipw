@@ -50,7 +50,7 @@ ob_start();
 				<section class="section row" id="lecture">
 					<h1>Lecture</h1>
 					<p>
-						Lecture content for this session <del>is</del> will be found in the decks in the future. For now, it'll be in-class slides.
+						Lecture content for this session <del>is</del> will be found in the decks in the future. For now, it'll be in-class slides. <a href="php-slides.pdf">This set</a> [pdf] covers the PHP stuff we went over.
 					</p>
 					<!--
 					<ul>
