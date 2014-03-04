@@ -1,0 +1,2 @@
+- Karel stuff should maybe be spread over two classes.
+	- + with some simpler puzzles to solve

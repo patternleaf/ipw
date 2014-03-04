@@ -47,10 +47,9 @@
 				<section id="session-3">
 
 					<h1>
-						Session 3<br>
-						<small>PHP, JavaScript; Client/Server</small>
+						<a href="3">Session 3</a><br>
+						<small>PHP: Variables, Arrays, Form Input</small>
 					</h1>
-
 					<p>
 						Continued concepts in procedural programming. Forms and PHP. Simple guestbook.
 					</p>
