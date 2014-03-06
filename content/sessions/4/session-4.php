@@ -145,6 +145,8 @@ ob_start();
 					</ul>
 					-->
 				</section>
+				<p>The rest of this page coming soon!</p>
+				<!--
 				<section class="section row" id="materials">
 					<h1>Materials</h1>
 					<p>
@@ -191,6 +193,7 @@ ob_start();
 						<img src="img/leo.png" style="width:100%">
 					</div>
 				</section>
+				-->
 			</div>
 		</div>
 	</div>

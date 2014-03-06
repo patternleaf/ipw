@@ -57,8 +57,8 @@
 				<section id="session-4">
 
 					<h1>
-						Session 4<br>
-						<small>Validation/Sanitization; Basic Error Handling; Data Stores</small>
+						<a href="4">Session 4</a><br>
+						<small>More on forms and PHP. File i/o.</small>
 					</h1>
 
 					<p>
