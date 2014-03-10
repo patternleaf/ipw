@@ -68,12 +68,10 @@
 				<section id="session-5">
 
 					<h1>
-						Session 5<br>
-						<small>Personal Project Kick-off; mySQL</small>
+						<a href="5">Session 5</a><br>
+						<small>JSON, APIs, Sanitization and Validation</small>
 					</h1>
-					<p>
-						mySQL-based Guestbook.
-					</p>
+
 				</section>
 				<section id="session-6">
 
