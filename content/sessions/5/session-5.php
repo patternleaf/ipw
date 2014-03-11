@@ -40,7 +40,7 @@ ob_start();
 					<ul>
 						<li>Talk about <dfn>JSON</dfn>.</li>
 						<li>Take a look at the Flickr <dfn>API</dfn>.</li>
-						<li>The <code>-></code> operator in PHP.</li>
+						<li><del>The <code>-></code> operator in PHP.</del> <em>Crisis averted!</em></li>
 						<li><a href="http://php.net/json_decode"><code>json_decode</code></a> and <a href="http://php.net/json_encode"><code>json_encode</code></a></li>
 						<li>Build a little app that consumes a JSON API.</li>
 						<li>Re-implement the guestbook using JSON as the data format.</li>
@@ -55,7 +55,7 @@ ob_start();
 						<li>Introduce the notion of variable <dfn>scope</dfn>.</li>
 						<li>Start working on implementing a santization and validation scheme for our guestbook.</li>
 					</ul>
-					
+
 					<h2>JSON + API Exercise</h2>
 					<p>
 						We're going to make a really simple app using <a href="https://www.flickr.com/services/api/">Flickr's API</a>. The bits and pieces required:
@@ -82,6 +82,12 @@ ob_start();
 						</div>
 					</div>
 					
+				</section>
+				<section class="section row" id="materials">
+					<h1>Materials</h1>
+					<p>
+						The pdf of the slides we went through in class can be found <a href="class-5-slides.pdf">here</a>.
+					</p>
 				</section>
 				<section class="section row" id="homework">
 					<h1>Homework</h1>
