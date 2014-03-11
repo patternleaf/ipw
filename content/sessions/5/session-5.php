@@ -87,7 +87,7 @@ ob_start();
 					<h1>Homework</h1>
 					<ol>
 						<li>
-							Finish sanitizing and validating guestbook input.
+							Finish above exercises and work on converting guestbook to use JSON as the data format.
 						</li>
 						<li>
 							Consider a personal project. Come prepared to present your idea. Please provide some kind of visual aid.
@@ -100,7 +100,7 @@ ob_start();
 								<li>Server-side apps (PHP, APIs, building a RESTful interface)</li>
 							</ul>
 						</li>
-					</ul>
+					</ol>
 				</section>
 				<section class="section row" id="goals">
 					<h1>Goals</h1>

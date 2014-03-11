@@ -34,7 +34,7 @@ if (array_key_exists('search-terms', $_GET)) {
 		'format' => 'json',
 		'nojsoncallback' => 1,
 		'per_page' => 16,
-		'text' => $_GET['search-terms'],
+		'text' => $_GET['search-terms']
 	);
 	
 	$ch = curl_init();
