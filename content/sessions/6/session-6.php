@@ -25,10 +25,15 @@ ob_start();
 				</section>
 				
 				<section class="section row">
-					<h1>Happy Birthday, <a href="http://en.wikipedia.org/wiki/History_of_the_World_Wide_Web">WWW</a>!</h1>
-					<p>
-						25 years ago today, Tim Berners-Lee published a paper proposing a system for "the management of general information about accelerators and experiments" at CERN, the European Organization for Nuclear Research. At the time he called it "the Mesh." A year later he would change the name to "the World Wide Web." <a href="http://www.w3.org/History/1989/proposal.html">Here is the original proposal</a>.
-					</p>
+					<div class="col-md-8">
+						<h1>Happy Birthday, <a href="http://en.wikipedia.org/wiki/History_of_the_World_Wide_Web">WWW</a>!</h1>
+						<p>
+							25 years ago today, Tim Berners-Lee published a paper proposing a system for "the management of general information about accelerators and experiments" at CERN, the European Organization for Nuclear Research. At the time he called it "the Mesh." A year later he would change the name to "the World Wide Web." <a href="http://www.w3.org/History/1989/proposal.html">Here is the original proposal</a>.
+						</p>
+					</div>
+					<div class="col-md-4">
+						<img src="imgs/cake.png" style="width:100%">
+					</div>
 				</section>
 				
 				<section class="section row" id="review">
