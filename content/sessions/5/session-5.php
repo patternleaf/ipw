@@ -1,6 +1,6 @@
 <?php 
 include('content/sessions/common.php');
-app()->setFragment('HTMLTitle', 'Intro to Programming for the Web: Session 4');
+app()->setFragment('HTMLTitle', 'Intro to Programming for the Web: Session 5');
 app()->setFragment('HTMLBodyAttributes', 'data-spy="scroll" data-offset="100" data-target="#sidebar-nav"');
 ob_start();
 ?>

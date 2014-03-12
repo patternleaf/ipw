@@ -69,19 +69,17 @@
 
 					<h1>
 						<a href="5">Session 5</a><br>
-						<small>JSON, APIs, Sanitization and Validation</small>
+						<small>JSON, APIs, more on HTTP vs PHP.</small>
 					</h1>
 
 				</section>
 				<section id="session-6">
 
 					<h1>
-						Session 6<br>
-						<small>Object-Oriented Programming; jQuery; WordPress</small>
+						<a href="6">Session 6</a><br>
+						<small>Variable Scope, Sanitization, Validation, and Error Handling</small>
 					</h1>
-					<p>
-						Paginated Guestbook. WordPress installation and configuration. Make a child theme.
-					</p>
+
 				</section>
 				<section id="session-7">
 					<h1>

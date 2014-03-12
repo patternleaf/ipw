@@ -47,6 +47,7 @@ ob_start();
 					<li><a href="http://nodeguide.com/style.html">Another style guide for JavaScript</a>. I agree with most of it.</li>
 					<li><a href="http://stackoverflow.com/questions/1547986/can-i-use-camel-case-in-css-class-names">Can I use CamelCase in CSS Class Names?</a> on Stack Overflow. Convention says uses lowercase-dashes.</li>
 					<li><a href="http://programmers.stackexchange.com/a/46760">Things to know and look for before making your site public</a> on Stack Overflow.</li>
+					<li><a href="http://mdo.github.io/code-guide/">Code Guide by @mdo</a></li>
 				</ul>
 				
 				<h2>Misc - Programming / Web</h2>
