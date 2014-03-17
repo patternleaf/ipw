@@ -33,12 +33,19 @@ ob_start();
 				<ul>
 					<li><a href="http://php.net">php.net</a></li>
 				</ul>
+				
+				<h2>WordPress</h2>
+				<ul>
+					<li><a href="http://wordpress.org/themes/">Official Themes Directory</a></li>
+					<li><a href="http://wordpress.org/plugins/">Official Plugins Directory</a></li>
+					<li><a href="http://codex.wordpress.org">The WordPress Codex</a></li>
+				</ul>
+
 			</div>
 			<div class="col-md-6">
-				<h2>Utilities</h2>
+				<h2>Web Design</h2>
 				<ul>
-					<li><a href="http://www.colorpicker.com">Simple color picker</a></li>
-					<li><a href="http://www.css3factory.com/linear-gradients/">CSS3 Gradient Generator</a></li>
+					<li><a href="http://www.smashingmagazine.com/2013/03/01/logical-breakpoints-responsive-design/">Logical Breakpoints for your Responsive Design</a></li>
 				</ul>
 				<h2>Style and Best Practices</h2>
 				<ul>
@@ -59,6 +66,13 @@ ob_start();
 					<li><a href="http://learnpythonthehardway.org/book/intro.html">The Hard Way is Easier</a> (beginner programming wisdom)</li>
 					<li><a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP: a fractal of bad design</a></li>
 				</ul>
+				
+				<h2>Utilities</h2>
+				<ul>
+					<li><a href="http://www.colorpicker.com">Simple color picker</a></li>
+					<li><a href="http://www.css3factory.com/linear-gradients/">CSS3 Gradient Generator</a></li>
+				</ul>
+				
 			</div>
 		</div>
 	</div>
