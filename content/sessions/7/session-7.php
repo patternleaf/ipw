@@ -56,9 +56,6 @@ ob_start();
 						<li>
 							Override the theme with a child theme. Make a couple of style changes.
 						</li>
-						<li>
-							
-						</li>
 					</ol>
 				</section>
 				<section class="section row" id="goals">
