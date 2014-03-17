@@ -39,6 +39,8 @@ ob_start();
 					<li><a href="http://wordpress.org/themes/">Official Themes Directory</a></li>
 					<li><a href="http://wordpress.org/plugins/">Official Plugins Directory</a></li>
 					<li><a href="http://codex.wordpress.org">The WordPress Codex</a></li>
+					<li>Reasonable overview of <a href="http://blog.spoongraphics.co.uk/tutorials/how-to-build-a-custom-wordpress-theme-from-scratch">building a theme from scratch</a></li>
+					<li>Don't know about <em>ultimate</em>, but <a href="http://wplift.com/the-ultimate-wordpress-theme-development-glossary">The Ultimate Theme Development Glossary</a></li>
 				</ul>
 
 			</div>

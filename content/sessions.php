@@ -74,21 +74,16 @@
 
 				</section>
 				<section id="session-6">
-
 					<h1>
 						<a href="6">Session 6</a><br>
 						<small>Variable Scope, Sanitization, Validation, and Error Handling</small>
 					</h1>
-
 				</section>
 				<section id="session-7">
 					<h1>
-						Session 7<br>
-						<small>APIs; The RESTful Web; CRUD; WordPress Hooks</small>
+						<a href="7">Session 7</a><br>
+						<small>WordPress</small>
 					</h1>
-					<p>
-						RESTful guestbook. WordPress plugins and themes.
-					</p>
 				</section>
 				<section id="session-8">
 					<h1>
