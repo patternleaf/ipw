@@ -7,7 +7,7 @@ ob_start();
 	<header class="jumbotron subhead">
 		<div class="container">
 			<h1>Session 8</h1>
-			<p class="lead">jQuery, The DOM</p>
+			<p class="lead">jQuery, The DOM, Events</p>
 		</div>
 	</header>
 	<div class="container">
@@ -38,7 +38,7 @@ ob_start();
 							<h1>Lecture</h1>
 							<p>First, we'll take a quick look at <a href="http://codex.wordpress.org/Writing_a_Plugin">developing WordPress plugins</a>.</p>
 							<p>Then we'll be working with <a href="http://jquery.com">jQuery</a>.</p>
-							<p>Slides forthcoming!</p>
+							<p><a href="class-8.pdf">Slides can be found here</a>.</p>
 						</div>
 						<div class="col-md-4">
 							<a href="http://jquery.com"><img src="http://jquery.com/jquery-wp-content/themes/jquery/images/logo-jquery@2x.png" style="background:#777;width:100%;padding:10px;border-radius:10px;"></a>
@@ -71,25 +71,30 @@ ob_start();
 
 							<h3 style="margin-top:3em;">Accordion</h3>
 
-<h4 style="margin-top:2em;"><a href="exercises/accordion/accordion-on-load.php">Accordion on load</a>.</h4>
+							<h4 style="margin-top:2em;"><a href="exercises/accordion/accordion-on-load.php">Accordion on load</a>.</h4>
 							<p>
 								This isn't really a working accordion, but it shows a technique for showing and hiding elements. Which element will remain standing when the JavaScript runs?
 							</p>
 
 							<div class="pretty-code non-editable" id="accordion-1" data-language="php" style="width:100%; height:300px"><?php app()->escapedFileContents(__DIR__.'/exercises/accordion/accordion-on-load.php'); ?></div>
 
-
 							<h3><a href="exercises/accordion/after.php">A working accordion</a></h3>
 							<p>Build your own! Start here:</p>
 							<div class="pretty-code non-editable" id="accordion-before" data-language="php" style="width:100%; height:300px"><?php app()->escapedFileContents(__DIR__.'/exercises/accordion/before.php'); ?></div>
+
 						</div>
 					</div>
 				</section>
-<!--
+
 				<section class="section row" id="materials">
 					<h1>Materials</h1>
+
+					<p>
+						The starter file for the WordPress plugin can be found <a href="exercises/wp-plugin/sidebar-accordion-before.zip">here</a>.
+					</p>
+
 				</section>
- -->
+
 
 				<section class="section row" id="homework">
 					<h1>Homework</h1>
