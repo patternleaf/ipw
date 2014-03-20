@@ -1,4 +1,4 @@
-<?php 
+<?php
 	app()->setFragment('HTMLTitle', 'Intro to Programming for the Web: Sessions');
 	app()->setFragment('HTMLBodyAttributes', 'data-spy="scroll" data-offset="100" data-target="#sidebar-nav"');
 	ob_start();
@@ -87,12 +87,10 @@
 				</section>
 				<section id="session-8">
 					<h1>
-						Session 8<br>
-						<small>MVC; Asynch Communication</small>
+						<a href="8">Session 8</a><br>
+						<small>jQuery, the DOM</small>
 					</h1>
-					<p>
-						Asynch guestbook. Topics in WordPress/jQuery.
-					</p>
+					
 				</section>
 				<section id="session-9">
 					<h1>
@@ -110,8 +108,8 @@
 			</div>
 		</div>
 	</div>
-<?php 
-app()->setFragment('HTMLBodyContent', ob_get_clean()); 
+<?php
+app()->setFragment('HTMLBodyContent', ob_get_clean());
 app()->appendTo('HTMLBodyTail', '
 	<script type="text/javascript" charset="utf-8">
 		$(\'body\').scrollspy();
@@ -126,9 +124,9 @@ app()->appendTo('HTMLBodyTail', '
 				$(\'#sidebar-nav\').removeClass(\'affixed\');
 			}
 		});
-		
+
 	</script>
-	
+
 ');
 
 app()->appendTo('HTMLHeadAdditions', '
