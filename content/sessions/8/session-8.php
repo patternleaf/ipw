@@ -79,8 +79,7 @@ ob_start();
 							<div class="pretty-code non-editable" id="accordion-1" data-language="php" style="width:100%; height:300px"><?php app()->escapedFileContents(__DIR__.'/exercises/accordion/accordion-on-load.php'); ?></div>
 
 
-							<h3>Accordion</h3>
-							<p>A <a href="exercises/accordion/after.php">working accordion</a>.</p>
+							<h3><a href="exercises/accordion/after.php">A working accordion</a></h3>
 							<p>Build your own! Start here:</p>
 							<div class="pretty-code non-editable" id="accordion-before" data-language="php" style="width:100%; height:300px"><?php app()->escapedFileContents(__DIR__.'/exercises/accordion/before.php'); ?></div>
 						</div>
