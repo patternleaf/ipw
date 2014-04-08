@@ -64,6 +64,10 @@ ob_start();
 							<h4 style="margin-top:2em;"><a href="exercises/ajax-client.php">Server-side</a>.</h4>
 							<div class="pretty-code non-editable" id="ajax-server" data-language="php" style="width:100%; height:300px"><?php app()->escapedFileContents(__DIR__.'/exercises/ajax-server.php'); ?></div>
 
+							<h4 style="margin-top:2em;">Client-side (with functions broken out).</h4>
+
+							<div class="pretty-code non-editable" id="ajax-client-broken-out" data-language="php" style="width:100%; height:300px"><?php app()->escapedFileContents(__DIR__.'/exercises/ajax-client-broken-out.php'); ?></div>
+
 							<h4>Exercise</h4>
 							<p>
 								Add a "number of paragraphs" option to the form, pass that value to the server, and have the server respond appropriately.
