@@ -33,7 +33,7 @@ ob_start();
 				<ul>
 					<li><a href="http://php.net">php.net</a></li>
 				</ul>
-				
+
 				<h2>WordPress</h2>
 				<ul>
 					<li><a href="http://wordpress.org/themes/">Official Themes Directory</a></li>
@@ -41,6 +41,7 @@ ob_start();
 					<li><a href="http://codex.wordpress.org">The WordPress Codex</a></li>
 					<li>Reasonable overview of <a href="http://blog.spoongraphics.co.uk/tutorials/how-to-build-a-custom-wordpress-theme-from-scratch">building a theme from scratch</a></li>
 					<li>Don't know about <em>ultimate</em>, but <a href="http://wplift.com/the-ultimate-wordpress-theme-development-glossary">The Ultimate Theme Development Glossary</a></li>
+					<li><a href="http://wphierarchy.com">Interactive WP Template Hierarchy</a></li>
 				</ul>
 
 			</div>
@@ -58,7 +59,7 @@ ob_start();
 					<li><a href="http://programmers.stackexchange.com/a/46760">Things to know and look for before making your site public</a> on Stack Overflow.</li>
 					<li><a href="http://mdo.github.io/code-guide/">Code Guide by @mdo</a></li>
 				</ul>
-				
+
 				<h2>Misc - Programming / Web</h2>
 				<ul>
 					<li><a href="http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml">Google HTML/CSS Style Guide</a></li>
@@ -68,13 +69,13 @@ ob_start();
 					<li><a href="http://learnpythonthehardway.org/book/intro.html">The Hard Way is Easier</a> (beginner programming wisdom)</li>
 					<li><a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP: a fractal of bad design</a></li>
 				</ul>
-				
+
 				<h2>Utilities</h2>
 				<ul>
 					<li><a href="http://www.colorpicker.com">Simple color picker</a></li>
 					<li><a href="http://www.css3factory.com/linear-gradients/">CSS3 Gradient Generator</a></li>
 				</ul>
-				
+
 			</div>
 		</div>
 	</div>

@@ -90,11 +90,11 @@
 						<a href="8">Session 8</a><br>
 						<small>jQuery, the DOM</small>
 					</h1>
-					
+
 				</section>
 				<section id="session-9">
 					<h1>
-						Session 9<br>
+						<a href="9">Session 9</a><br>
 						<small>Advanced Topics; Project Workshop</small>
 					</h1>
 				</section>
