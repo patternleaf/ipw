@@ -5,7 +5,7 @@ router()->set(array(
 	'/^\/api\/?(.*)$/' 					=> array('includes' => 'app/endpoint.php', 'templates' => array()),
 	'/^\/classes\/?$/' 					=> array('includes' => 'content/sessions.php'),
 	'/^\/sessions\/?$/' 				=> array('includes' => 'content/sessions.php'),
-	'/^\/sessions\/([\d])\/?$/' 		=> array('includes' => 'content/sessions/$1/session-$1.php'),
+	'/^\/sessions\/([\d]+)\/?$/' 		=> array('includes' => 'content/sessions/$1/session-$1.php'),
 	'/^\/decks\/?$/' 					=> array('includes' => 'content/decks.php'),
 	'/^\/decks\/(.*)\/?$/' 				=> array('includes' => 'content/decks/$1/deck.php', 'templates' => array('templates/deck.php')),
 	'/^\/resources\/?$/' 				=> array('includes' => 'content/resources.php'),

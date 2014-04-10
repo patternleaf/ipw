@@ -100,7 +100,7 @@
 				</section>
 				<section id="session-10">
 					<h1>
-						Session 10<br>
+						<a href="10">Session 10</a><br>
 						<small>More Advanced Topics; Project Presentations</small>
 					</h1>
 				</section>
