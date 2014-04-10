@@ -24,13 +24,13 @@ ob_start();
 						<small>Attributed to <a href="http://www.brainyquote.com/quotes/quotes/l/linustorva587356.html">Linus Torvalds</a></small>
 					</blockquote>
 				</section>
-				
+
 				<section class="section row" id="review">
 					<div class="col-md-8">
 						<h1>MySQL Guestbook</h1>
 						<ul>
 							<li><a href="exercises/guestbook-mysql/from-class-6.zip">Guestbook from class 6</a></li>
-							<li><a href="exercises/guestbook-mysql/finishes.zip">A finished MySQL guestbook</a>.</li>
+							<li><a href="exercises/guestbook-mysql/finished.zip">A finished MySQL guestbook</a>.</li>
 						</ul>
 					</div>
 				</section>
