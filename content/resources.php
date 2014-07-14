@@ -48,6 +48,7 @@ ob_start();
 			<div class="col-md-6">
 				<h2>Web Design</h2>
 				<ul>
+					<li><a href="http://learn.shayhowe.com/html-css/">Learn to Code HTML & CSS</a></li>
 					<li><a href="http://www.smashingmagazine.com/2013/03/01/logical-breakpoints-responsive-design/">Logical Breakpoints for your Responsive Design</a></li>
 				</ul>
 				<h2>Style and Best Practices</h2>

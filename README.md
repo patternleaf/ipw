@@ -1,6 +1,6 @@
 # Intro to Programming for the Web
 
-This is the online "course reader" for a 10-session introductory programming course, focusing on web technologies.
+This is the online "course reader" for a 10-session introductory programming course, focusing on PHP.
 
 ## What's In Here?
 
@@ -8,4 +8,4 @@ An in-development small homemade PHP webapp framework, and content for the cours
 
 ## Current Status
 
-Still in development!
+Still (always?) in development!

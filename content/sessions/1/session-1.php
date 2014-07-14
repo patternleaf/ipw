@@ -19,12 +19,34 @@ ob_start();
 			</div>
 			<div class="col-md-9 session-content">
 				
-				<p>The first session is about getting our environment setup and reviewing HTML and CSS. </p>
-					
-				<section class="section" id="lecture">
-					<h1>Lecture</h1>
+
+				<section class="section" id="class-goal">
+					<h1>Class Goal</h1>
 					<p>
-						Lecture content for this session is found in the <a href="/decks">decks</a>.
+						<a href="/content/sessions/1/class-goal/guestbook-restful/index.php" target="_blank">Here is an example of what we'll be building</a>. Things to note:
+						
+						<ul>
+							<li>Error conditions are handled—try putting in an invalid email address.</li>
+							<li>If your submission fails, the form is pre-filled when it reloads.</li>
+							<li>URLs are nice and <a href="http://en.wikipedia.org/wiki/RESTful">RESTful</a>.</li>
+							<li>The code structured in a decoupled, <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a> way.</li>
+						</ul>
+						
+						You can take a look at the PHP code for the app below. This does not show the HTML (presentation) side of things, but is code for a general "guestbook" app that could be presented in many ways. Hopefully by the end of the course you'll be able to write something like this yourself!
+					</p>
+					<div class="row">
+						<div class="code-container col-md-12" style="padding:1em; border:1px solid #ccc;">
+							<div class="pretty-code non-editable" id="exercise-4-solution-editor" data-language="php" style="width:100%; height:400px;"><?php echo app()->escapedFileContents(__DIR__.'/class-goal/guestbook-restful/guestbook-app.php'); ?></div>
+						</div>
+					</div>
+					
+				</section>
+
+				
+				<section class="section" id="lecture">
+					<h1>Lecture/In-Class</h1>
+					<p>
+						The first session is about getting our environment setup and reviewing HTML and CSS. Lecture content for this session is found in the <a href="/decks">decks</a>.
 					</p>
 					<ul>
 						<li><a href="/decks/introductions">Deck: Introductions</a></li>
@@ -46,7 +68,7 @@ ob_start();
 				<section class="section" id="homework">
 					<h1>Homework</h1>
 					<p>
-						For these two exercises, use your HTTP server environment. The URL of the pages when you load them in your browser should start with <code>http://</code>, not <code>file://</code>.
+						For these exercises, use your HTTP server environment. The URL of the pages when you load them in your browser should start with <code>http://</code>, not <code>file://</code>.
 					</p>
 					<h3>Moby Dick</h3>
 					<ol>
@@ -60,7 +82,7 @@ ob_start();
 							Make sure your markup <a href="http://validator.w3.org">validates</a>.
 						</li>
 						<li>
-							Find an image and embed it into the document.
+							Find an image and embed it into the document. (Try <a href="https://www.flickr.com/search/?q=whale&l=cc&ss=2&ct=6&mt=all&w=all&adv=1">searching on flickr's CC-licensed images</a>, maybe?)
 						</li>
 						<li>
 							Use a CSS reset to void your browser's default styling. Find one you like or <a href="http://html5doctor.com/html-5-reset-stylesheet/">try this one</a>.
@@ -77,7 +99,14 @@ ob_start();
 					<p>
 						The text file comes from <a href="http://www.gutenberg.org">Project Gutenberg</a>. Note that it does <strong>not</strong> contain the complete text of Moby Dick. :)
 					</p>
-					<h3>Pizza Recipe</h3>
+					
+					<h3>Hello, PHP</h3>
+					
+					<p>
+						Follow the instructions <a href="/decks/intro-to-php">here</a>.
+					</p>
+					
+					<h3>(Optional for CSS Pratice) Pizza Recipe</h3>
 				
 					<p>
 						Download <a href="pizza-test.zip">pizza-test.zip</a>. Expand the archive. Inside you'll find some jpeg images, an HTML file, and a folder called "notes". The HTML file contains a recipe which is marked up with reasonably semantic HTML, but no CSS styling. The "notes" folder contains some images ("comps") show a desired look for the page.
@@ -107,7 +136,10 @@ ob_start();
 				<section class="section" id="goals">
 					<h1>Goals</h1>
 					<p>
-						First, a working development environment&mdash;either local or remote. And hopefully you'll have some idea how to answer the following.
+						First, a working development environment&mdash;either local or remote. A sense of what the class will be covering.
+					</p>
+					<p>
+						Hopefully you'll have some idea how to answer the following.
 					</p>
 					<ul>
 						<li>what is semantic markup?</li>

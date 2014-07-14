@@ -1,7 +1,7 @@
 <h1>HTML/CSS Review</h1>
 <figure>
-	<img src="http://farm8.staticflickr.com/7419/11476442055_c2f1f0a550_b.jpg">
+	<a href="https://www.flickr.com/photos/jdblundell/3324932274" title="61/365 by Jonathan Blundell, on Flickr"><img src="https://farm4.staticflickr.com/3623/3324932274_78c459b6c7_b_d.jpg" alt="61/365"></a>
 	<figcaption class="img-attribution">
-		"This could be heaven or this could be HTML" by <a href="http://www.flickr.com/photos/63461743@N03/11476442055">Thomas Nielsen</a> on Flickr.
+		From <a href="https://www.flickr.com/photos/jdblundell">Jonathan Blundell</a> on Flickr.
 	</figcaption>
 </figure>
