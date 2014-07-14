@@ -7,7 +7,7 @@ ob_start();
 		<div class="jumbotron homepage">
 			<h1>Intro to Programming for the Web</h1>
 			<p><a href="http://www.boulderdigitalarts.com/training/details.php?offering=253">Web Application Development Transitions Certificate</a> | <strong class="color-highlight">Boulder Digital Arts</strong> </p>
-			<p><small>Winter 2014 Edition</small></p>
+			<p><small>Summer 2014 Edition</small></p>
 		</div>
 
 		<!-- Example row of columns -->
