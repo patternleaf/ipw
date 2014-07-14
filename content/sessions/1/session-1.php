@@ -20,6 +20,29 @@ ob_start();
 			<div class="col-md-9 session-content">
 				
 
+				<section class="section" id="lecture">
+					<h1>Lecture/In-Class</h1>
+					<p>
+						The first session is about getting our environment setup and reviewing HTML and CSS. Lecture content for this session is found in the <a href="/decks">decks</a>.
+					</p>
+					<ul>
+						<li><a href="/decks/introductions">Deck: Introductions</a></li>
+						<li><a href="/decks/environment-setup">Deck: Environment Setup</a></li>
+						<li><a href="/decks/html-css-review">Deck: HTML/CSS Review</a></li>
+					</ul>
+				</section>
+
+				<section class="section" id="reading">
+					<h1>Reading</h1>
+					<ul>
+						<li><a href="http://programmers.stackexchange.com/a/46760">Things to know and look for before making your site public</a> on Stack Overflow. This is a really good overview of how <em>much</em> can go into a thoroughly-thought-out web project.
+						</li>
+						<li>
+							<a href="http://learnpythonthehardway.org/book/intro.html">The Hard Way is Easier</a>. We aren't using Python in this course, but I agree with many of the sentiments expressed here.
+						</li>
+					</ul>
+				</section>
+				
 				<section class="section" id="class-goal">
 					<h1>Class Goal</h1>
 					<p>
@@ -43,34 +66,12 @@ ob_start();
 				</section>
 
 				
-				<section class="section" id="lecture">
-					<h1>Lecture/In-Class</h1>
-					<p>
-						The first session is about getting our environment setup and reviewing HTML and CSS. Lecture content for this session is found in the <a href="/decks">decks</a>.
-					</p>
-					<ul>
-						<li><a href="/decks/introductions">Deck: Introductions</a></li>
-						<li><a href="/decks/environment-setup">Deck: Environment Setup</a></li>
-						<li><a href="/decks/html-css-review">Deck: HTML/CSS Review</a></li>
-					</ul>
-				</section>
-
-				<section class="section" id="reading">
-					<h1>Reading</h1>
-					<ul>
-						<li><a href="http://programmers.stackexchange.com/a/46760">Things to know and look for before making your site public</a> on Stack Overflow. This is a really good overview of how <em>much</em> can go into a thoroughly-thought-out web project.
-						</li>
-						<li>
-							<a href="http://learnpythonthehardway.org/book/intro.html">The Hard Way is Easier</a>. We aren't using Python in this course, but I agree with many of the sentiments expressed here.
-						</li>
-					</ul>
-				</section>
 				<section class="section" id="homework">
 					<h1>Homework</h1>
 					<p>
 						For these exercises, use your HTTP server environment. The URL of the pages when you load them in your browser should start with <code>http://</code>, not <code>file://</code>.
 					</p>
-					<h3>Moby Dick</h3>
+					<h3>1. Moby Dick</h3>
 					<ol>
 						<li>
 							Download <a href="moby-dick-edited.txt">this plain text file</a>, make it accessible from your server, and turn it into an HTML5 document. You might look at <a href="http://www.sitepoint.com/a-basic-html5-template/">an HTML template</a> as a starting point.
@@ -100,13 +101,13 @@ ob_start();
 						The text file comes from <a href="http://www.gutenberg.org">Project Gutenberg</a>. Note that it does <strong>not</strong> contain the complete text of Moby Dick. :)
 					</p>
 					
-					<h3>Hello, PHP</h3>
+					<h3>2. Hello, PHP</h3>
 					
 					<p>
-						Follow the instructions <a href="/decks/intro-to-php">here</a>.
+						Follow the instructions <a href="/decks/intro-to-php">here</a>. More on this later.
 					</p>
 					
-					<h3>(Optional for CSS Pratice) Pizza Recipe</h3>
+					<h3>3. (Optional for CSS Pratice) Pizza Recipe</h3>
 				
 					<p>
 						Download <a href="pizza-test.zip">pizza-test.zip</a>. Expand the archive. Inside you'll find some jpeg images, an HTML file, and a folder called "notes". The HTML file contains a recipe which is marked up with reasonably semantic HTML, but no CSS styling. The "notes" folder contains some images ("comps") show a desired look for the page.
