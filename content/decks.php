@@ -13,6 +13,7 @@
 					<li><h3><a href="/decks/introductions">Introductions</a></h3></li>
 					<li><h3><a href="/decks/environment-setup">Environment Setup</a></h3></li>
 					<li><h3><a href="/decks/html-css-review">HTML/CSS Review</a></h3></li>
+					<li><h3><a href="/decks/intro-to-procedural">Deck: Intro to Procedural Programming</a></h3></li>
 				</ul>
 			</div>
 			<div class="col-md-3">

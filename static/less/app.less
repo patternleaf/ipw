@@ -69,6 +69,14 @@ code {
 	box-shadow: none;
 }
 
+.code-container {
+	overflow:hidden;
+	position:relative;
+	padding:1em; 
+	border:1px solid #ccc;
+	box-shadow:inset 0 3px 5px #ccc;
+}
+
 .live-exercise, .live-example {
 	overflow:hidden;
 	background:#eee;
@@ -85,19 +93,17 @@ code {
 	.exercise-switcher {
 		margin-bottom:1em;
 	}
+	.code-container {
+		border:none;
+		box-shadow:none;
+		padding:0;
+	}
 }
 	
 .live-example:after {
 	content:"Example";
 }
 	
-.code-container {
-	overflow:hidden;
-	position:relative;
-	padding:1em; 
-	border:1px solid #ccc;
-	box-shadow:inset 0 3px 5px #ccc;
-}
 	
 button.eval, button.php-run, button.karel-run, button.karel-reset {
 	display:block;

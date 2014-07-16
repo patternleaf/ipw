@@ -5,10 +5,10 @@
 			<li>A "sub-recipe", like chicken stock</li>
 			<li>Standard piece of <dfn>procedural programming</dfn></li>
 			<li>
-				<p>In JavaScript you can define a <dfn>named procedure</dfn> like:</p>
+				<p>In PHP you can define a <dfn>named procedure</dfn> like:</p>
 				<div id="procedure-syntax-1" class="pretty-code non-editable" data-language="javascript" style="height:100px; width:50%;">
 function helloWorld() {
-	alert("Hello, World");
+	print 'Hello, World.';
 }
 				</div>
 			</li>

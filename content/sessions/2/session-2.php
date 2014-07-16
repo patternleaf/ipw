@@ -46,14 +46,13 @@ ob_start();
 				</section>
 				<section class="section" id="materials">
 					<h1>Materials</h1>
-					<div class="row">
-						<p>
-							Download the <a href="karel-standalone-v1.zip">Karel Standalone Package</a>. Unpack it and serve it from your server. The index.php file should load out of the box without errors. <strong>If it doesn't, let me know!</strong> Don't spend time debugging problems you shouldn't have to solve.
-						</p>
-						<p>
-							Supplemental: the old keynote slides <a href="class-2.pdf">can be downloaded here [pdf]</a>. The currently available deck doesn't go far enough. :(
-						</p>
-					</div>
+					<p>
+						Download the <a href="karel-v1-php.zip">Karel Standalone Package</a>. Unpack it and serve it from your server. The index.php file should load out of the box without errors. <strong>If it doesn't, let me know!</strong> Don't spend time debugging problems you shouldn't have to solve.
+					</p>
+					<p>
+						Supplemental: the old keynote slides <a href="class-2.pdf">can be downloaded here [pdf]</a>. The currently available deck doesn't cover quite as much. :(
+					</p>
+
 				</section>
 				<section class="section" id="homework">
 					<h1>Homework</h1>
@@ -61,27 +60,15 @@ ob_start();
 					<div class="row">
 						<div class="col-md-10">
 							<p>
-								There are 4 Karel problems in the download. Tackle as many as you feel able to, but <strong>at least</strong> #1. There are techniques we'll talk about which will help with #3 and #4. <strong>DO</strong> ask questions and <strong>DON'T</strong> bang your head against a wall any more than you feel is appropriate. :)
+								There are 5 Karel problems in the download. Tackle as many as you feel able to, but <strong>at least</strong> #1 and #2. <strong>DO</strong> ask questions and <strong>DON'T</strong> bang your head against a wall any more than you feel is appropriate. :)
 							</p>
 							<p>
-								The process for doing a problem is the following:
+								To complete each exercise, edit the solution.php file in each folder (eg, <code>localhost:8888/karel-v1-php/problem-1/solution.php</code>). Reload the index.php file as you add commands to see the result.
 							</p>
-							<ol>
-								<li>
-									Edit index.php to include <code>karel-problem-<em>n</em></code> where <em>n</em> is the problem number. Only include one problem file at a time!
-								</li>
-								<li>
-									Copy the file <code>karel-solution-template.js</code> and name it <code>karel-solution-<em>n</em>.js</code>, matching the problem number.
-								</li>
-								<li>
-									Include that solution file in index.php as well. (Only include one solution file too, of course.)
-								</li>
-								<li>
-									Edit <code>karel-solution-<em>n</em>.js</code> to solve the problem. As you're working, save the file and reload in the browser to see the results.
-								</li>
-							</ol>
 							<p>
-								<strong>Keep the browser console open to see errors</strong>. You can use <code>console.log</code> (or any of the more advanced JS debugging facilities if you're familiar with them) to help debug.
+								Keep your PHP console open to see errors, and use <code>error_log</code> to help debug. 							</p>
+							<p>
+								<strong>Important note</strong>: The Karel exercises were built in JavaScript and designed to be solved in JavaScript. Here we're using an <em>extraordinarily</em> hacky method to transform PHP into JavaScript. There should be enough here to solve the problems, but none of PHP's built-in functions will be available, and any abnormal syntax may not provide very good error messages.
 							</p>
 						</div>
 						<div class="col-md-2">
