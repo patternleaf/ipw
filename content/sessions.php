@@ -35,7 +35,7 @@
 				</section>
 				<section id="session-2">
 					<h1>
-						Session 2<br>
+						<a href="2">Session 2</a><br>
 						<small>Input/Output</small>
 					</h1>
 					<p>
