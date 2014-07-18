@@ -79,12 +79,13 @@ ob_start();
 					<div class="row">
 						<h2>Guestbook</h2>
 						<p>
-							We'll be spending time learning PHP, and web app programming via a simple guestbook application. Start thinking about the following questions:
+							We'll be learning PHP and web app programming via a simple guestbook application. For Monday please put together the markup and basic styling for a guestbook. 
 						</p>
 						<ul>
 							<li>What are the parts of a guestbook?</li>
-							<li>What might the markup for a guestbook look like?</li>
+							<li>What would semantic markup for a guestbook be? There's no single right answer.</li>
 						</ul>
+						<p><a href="/content/sessions/3/materials/starter-file-based/index-simply-styled.php">Here's an example</a> of a simply styled, reasonably semantic guestbook.</p> Note that it has a couple of lorem-ipsum messages so that we can tell what they will look like. Also note that <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fipw.patternleaf.com%2Fcontent%2Fsessions%2F3%2Fmaterials%2Fstarter-file-based%2Findex-simply-styled.php&charset=%28detect+automatically%29&doctype=Inline&group=0">it validates</a>. Yours should, too!
 					</div>
 				</section>
 				<section class="section" id="goals">

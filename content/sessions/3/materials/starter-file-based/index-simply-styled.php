@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Guestbook</title>
 	<link rel="stylesheet" href="zengarden.css" type="text/css" media="screen">
 	<style type="text/css" media="screen">

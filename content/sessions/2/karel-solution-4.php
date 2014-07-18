@@ -33,11 +33,12 @@ function isOnEdgeOfPothole() {
 		turnRight();
 		move();
 		turnAround();
-		return result;
+		return $result;
 	}
 	return false;
 }
 
+// At the end of this function Karel is above the pothole.
 function depositCheeseInPothole() {
 	move();
 	turnRight();
@@ -60,4 +61,5 @@ while (frontIsClear()) {
 		move();
 	}
 }
+
 ?>

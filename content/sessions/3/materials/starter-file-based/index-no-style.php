@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Guestbook</title>
+	<meta charset="UTF-8">
 </head>
 <body>
 	<header>
