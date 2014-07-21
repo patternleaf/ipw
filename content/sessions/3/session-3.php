@@ -7,7 +7,7 @@ ob_start();
 	<header class="jumbotron subhead">
 		<div class="container">
 			<h1>Session 3</h1>
-			<p class="lead">arrays, http, forms, POST and GET</p>
+			<p class="lead">arrays, http, forms, post and get</p>
 		</div>
 	</header>
 	<div class="container">
@@ -62,17 +62,26 @@ ob_start();
 						</div>
 					</div>
 					
+					<p class="sample-solution-link">
+						<a href="/content/sessions/3/exercises/1/solution.php">Sample solution</a>.
+					</p>
+					
 					<h2>Exercise 2</h2>
 					<p>
 						Write an HTML/PHP page that prints out pickles and their country of origin. 
 						Use a definition list (<code>dl</code>) to render the data and the <code>$pickleOrigins</code> associative array as the data source.
 					</p>
-					
 					<div class="row">
 						<div class="code-container col-md-12" style="padding:1em;">
 							<div class="pretty-code non-editable" id="exercise-2-starter" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/2/starter.php'); ?></div>
 						</div>
 					</div>
+					
+					<p class="sample-solution-link">
+						<a href="/content/sessions/3/exercises/2/solution.php">Sample solution</a>. (View source to see <code>dl</code> usage.)
+					</p>
+					
+					
 					<h2>Exercise 3</h2>
 					<p>
 						Write the PHP necessary to drill into the given data structure until you get to the nested array one of whose values is (natch) "pickles". Then iterate over that array and print all of its values in an ordered list. Render the "pickles" item in a huge font, green, and all uppercase to make sure everyone knows that pickles are rad.
@@ -82,6 +91,12 @@ ob_start();
 							<div class="pretty-code non-editable" id="exercise-3-starter" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/3/starter.php'); ?></div>
 						</div>
 					</div>
+					
+					<p class="sample-solution-link">
+						<a href="/content/sessions/3/exercises/3/solution.php">Sample solution</a>.
+					</p>
+					
+					
 					<h2>More Lecture: Forms</h2>
 					<ul>
 						<li><a href="/decks/http-form-input-with-php.pdf">Deck [pdf]: HTTP Form input with PHP</a></li>
@@ -100,6 +115,11 @@ ob_start();
 						Questions: Where should the PHP go? Does it make a difference? What should happen if the page is loaded but not on account of someone submitting the form?
 					</p>
 					
+					<p class="sample-solution-link">
+						<a href="/content/sessions/3/exercises/4/solution.php">Sample solution</a>.
+					</p>
+					
+					
 					<h2>Exercise 5</h2>
 					<p>
 						Make the form in your guestbook functional: have it print a submitted entry in-place in the list of messages. Don't try to save the message yet.
@@ -107,7 +127,7 @@ ob_start();
 					
 					<h2>Supplementary</h2>
 					<ul>
-						<li><a href="/decks/client-server-internet.pdf">Deck [pdf]: The client-Server structure of the internet</a>.</li>
+						<li><a href="/decks/client-server-internet.pdf">Deck [pdf]: The client-server structure of the internet</a>.</li>
 						<li><a href="/decks/client-server-internet.pdf">Deck [pdf]: PHP and the internet</a>.</li>
 					</ul>
 				</section>
@@ -124,17 +144,19 @@ ob_start();
 					<p>
 						For the assignment, we're going to use two PHP functions, 
 						<code><a href="http://php.net/file_get_contents">file_get_contents</a></code> and 
-						<code><a href="http://php.net/file_put_contents">file_put_contents</a></code> to manage the datastore of guestbook messages.
+						<code><a href="http://php.net/file_put_contents">file_put_contents</a></code> to manage the datastore of guestbook messages. Be sure to check the error log if you run into trouble. One likely gotcha: the process running PHP may not have write permissions on the directory in which you want to write your data file.
+					</p>
+					<p>
+						Some questions:
+						<ul>
+							<li>How could we store the message entries?</li>
+							<li>What are some of the pros and cons to this approach?</li>
+						</ul>
 					</p>
 				</section>
 				<section class="section row" id="goals">
 					<h1>Goals</h1>
-
 					<div class="col-md-9">
-						<p>
-							We'll be reviewing and/or covering the following:
-						</p>
-						
 						<ul>
 							<li>Printing PHP's output to the webpage</li>
 							<li>Where and when does PHP run?</li>
@@ -143,6 +165,7 @@ ob_start();
 							<li>Variables</li>
 							<li>Arrays in PHP: linear and associative</li>
 							<li><code>get</code> vs <code>post</code> HTTP methods</li>
+							<li>Simple file I/O in PHP</li>
 						</ul>
 					</div>
 					<div class="col-md-3">
