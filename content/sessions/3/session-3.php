@@ -53,33 +53,46 @@ ob_start();
 					<p>
 						Write an HTML/PHP page that prints out the string 'pickle' 20 times. Use a <code>for</code> loop.
 					</p>
+					<div class="row">
+						<div class="code-container col-md-12" style="padding:1em;">
+							<div class="pretty-code non-editable" id="exercise-1-starter" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/1/starter.php'); ?></div>
+						</div>
+					</div>
+					
 					<h2>Exercise 2</h2>
 					<p>
 						Write an HTML/PHP page that prints out pickles and their country of origin. 
-						Use a definition list (<code>dl</code>) and the following associative array as the data source.
+						Use a definition list (<code>dl</code>) to render the data and the <code>$pickleOrigins</code> associative array as the data source.
 					</p>
-					<code style="white-space:pre">$pickleOrigins = array(
-	‘Gherkin’ => ‘West Indian’,
-	‘Polish’ => ‘Poland’,
-	‘Hungarian’ => ‘Hungary’,
-	‘Swedish’ => ‘Sweden’
-);</code>
+					
+					<div class="row">
+						<div class="code-container col-md-12" style="padding:1em;">
+							<div class="pretty-code non-editable" id="exercise-2-starter" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/2/starter.php'); ?></div>
+						</div>
+					</div>
 					<h2>Exercise 3</h2>
 					<p>
-						Copy the php below into a file on your server. Write the PHP necessary to drill into the data structure until you get to the nested array one of whose values is (natch) "pickles". Then iterate over that array and print all of its values in an ordered list.
+						Write the PHP necessary to drill into the given data structure until you get to the nested array one of whose values is (natch) "pickles". Then iterate over that array and print all of its values in an ordered list. Render the "pickles" item in a huge font, green, and all uppercase to make sure everyone knows that pickles are rad.
 					</p>
 					<div class="row">
 						<div class="code-container col-md-12" style="padding:1em;">
-							<div class="pretty-code non-editable" id="exercise-2-data" data-language="php" style="width:100%; height:300px;"><?php echo app()->escapedFileContents(__DIR__.'/materials/test-data/quick-stats.php'); ?></div>
+							<div class="pretty-code non-editable" id="exercise-3-starter" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/3/starter.php'); ?></div>
 						</div>
 					</div>
+					<h2>More Lecture: Forms</h2>
 					<ul>
 						<li><a href="/decks/http-form-input-with-php.pdf">Deck [pdf]: HTTP Form input with PHP</a></li>
 					</ul>
-					<h2>Exercise 3</h2>
+					<h2>Exercise 4</h2>
 					<p>
-						
+						Write a form in an HTML5 document that lets a user submit a number. Upon submission, the page should print out "pickle" the number of times requested by the user.
 					</p>
+					<div class="row">
+						<div class="code-container col-md-12" style="padding:1em;">
+							<div class="pretty-code non-editable" id="exercise-4-starter" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/4/starter.php'); ?></div>
+						</div>
+					</div>
+					
 				</section>
 				<section class="section row" id="materials">
 					<h1>Materials</h1>

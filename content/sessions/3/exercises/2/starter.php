@@ -6,6 +6,12 @@
 <body>
 
 <?php
+$pickleOrigins = array(
+	'Gherkin' => 'West Indian',
+	'Polish' => 'Poland',
+	'Hungarian' => 'Hungary',
+	'Swedish' => 'Sweden'
+);
 // your code goes here
 ?>
 
