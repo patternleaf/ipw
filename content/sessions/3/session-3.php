@@ -43,10 +43,10 @@ ob_start();
 						Also: if you were going to write some pseudocode for your guestbook, what might that look like?
 					</p>
 				</section>
-				<section class="section row" id="lecture">
-					<h1>Lecture</h1>
+				<section class="section row" id="in-class">
+					<h1>Exercises &amp; Lecture</h1>
 					<p>
-						A little review&hellip;
+						First a little review&hellip;
 					</p>
 					<ul>
 						<li><a href="/decks/variables-in-php.pdf">Deck [pdf]: Variables in PHP</a></li>
@@ -86,40 +86,46 @@ ob_start();
 					<ul>
 						<li><a href="/decks/http-form-input-with-php.pdf">Deck [pdf]: HTTP Form input with PHP</a></li>
 					</ul>
+
 					<h2>Exercise 4</h2>
 					<p>
-						Write a form in an HTML5 document that lets a user submit a number. Upon submission, the page should print out "pickle" the number of times requested by the user.
+						Write a form in an HTML5 document that lets a user submit a number. Upon submission, the page should print out "pickle" the number of times requested by the user. Start with this form:
 					</p>
 					<div class="row">
 						<div class="code-container col-md-12" style="padding:1em;">
-							<div class="pretty-code non-editable" id="exercise-4-starter" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/4/starter.php'); ?></div>
+							<div class="pretty-code non-editable" id="exercise-4-starter" data-language="php" style="width:100%; height:300px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/4/starter.php'); ?></div>
 						</div>
 					</div>
-					
-				</section>
-				<section class="section row" id="materials">
-					<h1>Materials</h1>
 					<p>
-						If you don't wish to markup your own guestbook, you can view the source for this <a href="http://intro-web-programming.dev/sessions/3/materials/starter-file-based/index-no-style.php">guestbook starter file</a> and copy and paste that into a file on your own server.
+						Questions: Where should the PHP go? Does it make a difference? What should happen if the page is loaded but not on account of someone submitting the form?
 					</p>
+					
+					<h2>Exercise 5</h2>
+					<p>
+						Make the form in your guestbook functional: have it print a submitted entry in-place in the list of messages. Don't try to save the message yet.
+					</p>
+					
+					<h2>Supplementary</h2>
+					<ul>
+						<li><a href="/decks/client-server-internet.pdf">Deck [pdf]: The client-Server structure of the internet</a>.</li>
+						<li><a href="/decks/client-server-internet.pdf">Deck [pdf]: PHP and the internet</a>.</li>
+					</ul>
 				</section>
+				
 				<section class="section row" id="homework">
 					<h1>Homework</h1>
-					<h2>Guestbook - Markup &amp; Form Submission</h2>
-					<ol>
-						<li>
-							Markup a simple guestbook usign HTML5. (Alternatively, use a <a href="http://intro-web-programming.dev/sessions/3/materials/starter-file-based/index-no-style.php">prefab one</a>.)Style it in some way you like with either a framework or by hand.
-						</li>
-						<li>
-							Be sure to include a form in the guestbook. At a minimum the form should allow the user to leave their name, message, and a title.
-						</li>
-						<li>
-							Use PHP to capture the form input on the server (using <code>$_POST</code>) and print out the submission at the appropriate place in your page on response.
-						</li>
-						<li>
-							We won't be <em>saving</em> the submission just yet. We'll do that Wednesday.
-						</li>
-					</ul>
+					<h2>Guestbook - Basic File-Based</h2>
+					<p>
+						Check out this <a href="/decks/assignment-file-based-guestbook.pdf">quick deck [pdf]</a>.
+					</p>
+					<p>
+						The obvious problem with our guestbook following exercise 5 is that the data from a submission does not <em>persist</em> past a single page load. This is what is meant when we say that HTTP as a protocol is <dfn>stateless</dfn>. What we need is a server-side <dfn>datastore</dfn>. We're going to start with a naive datastore and gradually improve it.
+					</p> 
+					<p>
+						For the assignment, we're going to use two PHP functions, 
+						<code><a href="http://php.net/file_get_contents">file_get_contents</a></code> and 
+						<code><a href="http://php.net/file_put_contents">file_put_contents</a></code> to manage the datastore of guestbook messages.
+					</p>
 				</section>
 				<section class="section row" id="goals">
 					<h1>Goals</h1>
