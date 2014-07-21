@@ -45,7 +45,7 @@
 				<section id="session-3">
 
 					<h1>
-						Session 3<br>
+						<a href="2">Session 3</a><br>
 						<small>PHP: Variables, Arrays, Data Types</small>
 					</h1>
 					<p>
@@ -53,7 +53,6 @@
 					</p>
 				</section>
 				<section id="session-4">
-
 					<h1>
 						Session 4<br>
 						<small>More on forms and PHP. File i/o.</small>
