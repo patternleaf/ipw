@@ -7,7 +7,7 @@ ob_start();
 	<header class="jumbotron subhead">
 		<div class="container">
 			<h1>Session 3</h1>
-			<p class="lead">PHP, functions, variables, arrays</p>
+			<p class="lead">arrays, http, forms, POST and GET</p>
 		</div>
 	</header>
 	<div class="container">
@@ -27,21 +27,14 @@ ob_start();
 					<h1>Review</h1>
 					<h2>Karel</h2>
 					<p>
-						Review Karel solutions from <a href="../2">Session 2</a>. 
-					</p>
-					<ul>
-						<li>Problem 3</li>
-						<li>Problem 4</li>
-					</ul>
-					<p>
-						How did you use decomposition, iteration, and conditionals to solve the problems?
-					</p>
-					<p>
-						We can also look at problem 5.
+						Review Karel solutions from <a href="../2">Session 2</a>. How did you use decomposition, iteration, augmentation, and conditionals to solve the problems?
 					</p>
 					<h2>
 						Guestbook
 					</h2>
+					<p>
+						Let's look at our answers to:
+					</p>
 					<ul>
 						<li>What are the parts of a guestbook?</li>
 						<li>What might the markup for a guestbook look like?</li>
@@ -50,16 +43,39 @@ ob_start();
 				<section class="section row" id="lecture">
 					<h1>Lecture</h1>
 					<p>
-						Lecture content for this session <del>is</del> will be found in the decks in the future. For now, it'll be in-class slides. <a href="php-slides.pdf">This set</a> [pdf] covers the PHP stuff we went over.
+						A little review&hellip;
 					</p>
-					<!--
 					<ul>
-						<li><a href="/decks/intro-to-php">Deck: Intro to PHP</a></li>
-						<li><a href="/decks/functions-and-variables-php">Deck: Functions and Variables (PHP)</a></li>
-						<li><a href="/decks/arrays-in-php">Deck: Arrays in PHP</a></li>
-						<li><a href="/decks/php-and-http-forms">Deck: PHP and HTTP Forms</a></li>
+						<li><a href="/decks/variables-in-php.pdf">Deck [pdf]: Variables in PHP</a></li>
+						<li><a href="/decks/arrays-in-php.pdf">Deck [pdf]: Arrays in PHP</a></li>
 					</ul>
-					-->
+					<h2>Exercise 1</h2>
+					<p>
+						Write an HTML/PHP page that prints out pickles and their country of origin. 
+						Use a definition list (<code>dl</code>) and the following associative array as the data source.
+					</p>
+					<code style="white-space:pre">$pickleOrigins = array(
+	‘Gherkin’ => ‘West Indian’,
+	‘Polish’ => ‘Poland’,
+	‘Hungarian’ => ‘Hungary’,
+	‘Swedish’ => ‘Sweden’
+);</code>
+					<h2>Exercise 2</h2>
+					<p>
+						Copy the php below into a file on your server. Write the PHP necessary to drill into the data structure until you get to the nested array one of whose values is (natch) "pickles". Then iterate over that array and print all of its values in an ordered list.
+					</p>
+					<div class="row">
+						<div class="code-container col-md-12" style="padding:1em;">
+							<div class="pretty-code non-editable" id="exercise-2-data" data-language="php" style="width:100%; height:300px;"><?php echo app()->escapedFileContents(__DIR__.'/materials/test-data/quick-stats.php'); ?></div>
+						</div>
+					</div>
+					<ul>
+						<li><a href="/decks/http-form-input-with-php.pdf">Deck [pdf]: HTTP Form input with PHP</a></li>
+					</ul>
+					<h2>Exercise 3</h2>
+					<p>
+						
+					</p>
 				</section>
 				<section class="section row" id="materials">
 					<h1>Materials</h1>
