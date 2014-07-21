@@ -39,6 +39,9 @@ ob_start();
 						<li>What are the parts of a guestbook?</li>
 						<li>What might the markup for a guestbook look like?</li>
 					</ul>
+					<p>
+						Also: if you were going to write some pseudocode for your guestbook, what might that look like?
+					</p>
 				</section>
 				<section class="section row" id="lecture">
 					<h1>Lecture</h1>
