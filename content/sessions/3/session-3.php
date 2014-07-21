@@ -51,6 +51,10 @@ ob_start();
 					</ul>
 					<h2>Exercise 1</h2>
 					<p>
+						Write an HTML/PHP page that prints out the string 'pickle' 20 times. Use a <code>for</code> loop.
+					</p>
+					<h2>Exercise 2</h2>
+					<p>
 						Write an HTML/PHP page that prints out pickles and their country of origin. 
 						Use a definition list (<code>dl</code>) and the following associative array as the data source.
 					</p>
@@ -60,7 +64,7 @@ ob_start();
 	‘Hungarian’ => ‘Hungary’,
 	‘Swedish’ => ‘Sweden’
 );</code>
-					<h2>Exercise 2</h2>
+					<h2>Exercise 3</h2>
 					<p>
 						Copy the php below into a file on your server. Write the PHP necessary to drill into the data structure until you get to the nested array one of whose values is (natch) "pickles". Then iterate over that array and print all of its values in an ordered list.
 					</p>
