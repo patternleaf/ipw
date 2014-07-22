@@ -81,7 +81,6 @@ ob_start();
 						<a href="/content/sessions/3/exercises/2/solution.php">Sample solution</a>. (View source to see <code>dl</code> usage.)
 					</p>
 					
-					
 					<h2>Exercise 3</h2>
 					<p>
 						Write the PHP necessary to drill into the given data structure until you get to the nested array one of whose values is (natch) "pickles". Then iterate over that array and print all of its values in an ordered list. Render the "pickles" item in a huge font, green, and all uppercase to make sure everyone knows that pickles are rad.
@@ -119,12 +118,6 @@ ob_start();
 						<a href="/content/sessions/3/exercises/4/solution.php">Sample solution</a>.
 					</p>
 					
-					
-					<h2>Exercise 5</h2>
-					<p>
-						Make the form in your guestbook functional: have it print a submitted entry in-place in the list of messages. Don't try to save the message yet.
-					</p>
-					
 					<h2>Supplementary</h2>
 					<ul>
 						<li><a href="/decks/client-server-internet.pdf">Deck [pdf]: The client-server structure of the internet</a>.</li>
@@ -134,6 +127,18 @@ ob_start();
 				
 				<section class="section row" id="homework">
 					<h1>Homework</h1>
+					
+					<p>
+						First, finish the markup and styling of your guestbook if you didn't already. Be sure to include a <em>lorem ipsum</em> filler message or two so that you know what a message will look like. <a href="materials/starter-file-based/index-simply-styled.php">See my example for inspiration</a>, but remember that there are <a href="http://mashable.com/2013/07/11/lorem-ipsum/">a plethora of possibilities</a> on the filler text front. (I always find <a href="http://lorizzle.nl">lorizzle</a> irresistable.)
+					</p>
+					<p>
+						Next, make the form in your guestbook functional: on submission, have the PHP print the submitted data (via <code>method="post"</code> in the form and therefore the <code>$_POST</code> array in PHP) in-place within the list of messages.
+					</p>
+					<p>
+						The obvious problem with this is that the data from a submission does not <em>persist</em> past a single page load. This is what is meant when we say that HTTP as a protocol is <dfn>stateless</dfn>. What we need is a server-side <dfn>datastore</dfn>. Next time, we'll build a naive datastore, and gradually we'll improve it.
+					</p>
+					
+					<?php /*
 					<h2>Guestbook - Basic File-Based</h2>
 					<p>
 						Check out this <a href="/decks/assignment-file-based-guestbook.pdf">quick deck [pdf]</a>.
@@ -153,6 +158,7 @@ ob_start();
 							<li>What are some of the pros and cons to this approach?</li>
 						</ul>
 					</p>
+					*/?>
 				</section>
 				<section class="section row" id="goals">
 					<h1>Goals</h1>
@@ -165,7 +171,8 @@ ob_start();
 							<li>Variables</li>
 							<li>Arrays in PHP: linear and associative</li>
 							<li><code>get</code> vs <code>post</code> HTTP methods</li>
-							<li>Simple file I/O in PHP</li>
+							<li><code>$_GET</code> and <code>$_POST</code> arrays in PHP</li>
+							<?php /* <li>Simple file I/O in PHP</li> */ ?>
 						</ul>
 					</div>
 					<div class="col-md-3">
