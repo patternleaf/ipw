@@ -45,7 +45,7 @@
 				<section id="session-3">
 
 					<h1>
-						<a href="2">Session 3</a><br>
+						<a href="3">Session 3</a><br>
 						<small>PHP: Variables, Arrays, Data Types</small>
 					</h1>
 					<p>
