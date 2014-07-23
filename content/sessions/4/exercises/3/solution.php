@@ -40,6 +40,7 @@
 
 // was there a form submission on this page load?
 function guestbookWasSigned() {
+	return !empty($_POST);
 }
 
 function getSubmittedEntry() {
@@ -47,12 +48,38 @@ function getSubmittedEntry() {
 	// attacks. we're basically making this web page a 
 	// publicly-modifiable page that anyone can alter as they wish. 
 	// well, anyone who knows any javascript.
+	return array(
+		'title' => $_POST['title'],
+		'name' => $_POST['name'],
+		'message' => $_POST['message']
+	);
 }
 
 function addEntryToGuestbook($entry) {
+	$newEntry = '
+		<li class="row">
+			<div class="3u">
+				<h3>'.$entry['title'].'</h3>
+				<div class="byline">By '.$entry['name'].'</div>
+				<div class="dateline">'.date('l j F Y \a\t h:i A').'</div>
+			</div>
+			<div class="9u">
+				'.$entry['message'].'
+			</div>
+		</li>
+	';
+	// append it to messages.txt
+	file_put_contents(
+		'messages.txt',
+		$newEntry,
+		FILE_APPEND
+	);
 }
 
 function listEntries() {
+	// print messages.txt, whether there was a new submission or not.
+	$messagesHTML = file_get_contents('messages.txt');
+	echo $messagesHTML;
 }
 	
 ?>

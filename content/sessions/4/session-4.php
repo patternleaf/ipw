@@ -27,7 +27,7 @@ ob_start();
 					<h1>Review</h1>
 					<h2>Guestbook Starter</h2>
 					<p>
-						Quick review of everyone's guestbook so far. Assignment was to mark up and style a guestbook, and (if you were feeling brave), try to print out the most recent submission in the appropriate place on the page.
+						Quick review of everyone's guestbook so far. Assignment was to mark up and style a guestbook and print out the most recent submission in the appropriate place on the page.
 					</p>
 				</section>
 				<section class="section row" id="lecture">
@@ -46,28 +46,6 @@ ob_start();
 					</ul>
 					
 					<h2>Exercise 1</h2>
-					<div class="row live-exercise">
-						<p class="col-md-3">
-							Copy the code to the right and write the PHP necessary to make <a href="exercises/1/solution.php">this little app</a>.
-						</p>
-						<div class="code-container col-md-8" style="padding-right:1em;">
-							<div class="pretty-code non-editable" id="exercise-1-editor" data-language="php" style="width:100%; height:100px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/1/index.php'); ?></div>
-						</div>
-					</div>
-					<p>
-						Here is one solution:
-					</p>
-					<div class="answer-container">
-						<div class="row">
-							<div class="col-md-2"></div>
-							<div class="code-container col-md-8" style="padding-right:1em;">
-								<div class="pretty-code non-editable" id="exercise-1-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/1/solution.php'); ?></div>
-							</div>
-						</div>
-					</div>
-						
-					
-					<h2>Exercise 2</h2>
 					<p>
 						With your own guestbook code, use <code>$_POST</code> to capture the input values and print them in the proper place in your page. <a href="exercises/2/before.php">For example</a>.
 					</p>
@@ -80,34 +58,37 @@ ob_start();
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="code-container col-md-5" style="padding:1em;">
-								<div class="pretty-code non-editable" id="exercise-2-before-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/2/before.php'); ?></div>
+								<div class="pretty-code non-editable" id="exercise-1-before-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/1/before.php'); ?></div>
 							</div>
 							<div class="code-container col-md-5" style="padding:1em;">
-								<div class="pretty-code non-editable" id="exercise-2-after-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/2/after.php'); ?></div>
+								<div class="pretty-code non-editable" id="exercise-1-after-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/1/after.php'); ?></div>
 							</div>
 						</div>
 					</div>
 					
 					
 					
-					<h2>Exercise 3</h2>
+					<h2>Exercise 2</h2>
 					<p>
-						Using function calls but without implementing the functions, decompose your guestbook. Below is one possible solution.
+						Think about what things will need to happen to make your guestbook work. For example: "It will need to get the submission data. Then it'll need to add the new submission to the list of existing submissions." And so on. Write pseudo-code in the appropriate places in the guestbook page to sketch out a very basic solution.
+					</p>
+					<p>
+						Convert your pseudocode into functions, but <em>don't implement them yet</em>. We're still sketching. Just like in our Karel exercises, you can define a handful of utility functions before you invoke them to solve the problem. Not everything needs to be in a function, but some things may make more sense as a function.
+					</p>
+					<p>
+						Below is one possible solution.
 					</p>
 					<div class="answer-container">
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="code-container col-md-10" style="padding:1em;">
-								<div class="pretty-code non-editable" id="exercise-3-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/3/solution.php'); ?></div>
+								<div class="pretty-code non-editable" id="exercise-2-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/2/solution.php'); ?></div>
 							</div>
 						</div>
 					</div>
 					
-					<p>
-						Probably going to have some deck content here. Slides to come!
-					</p>
-					
-					<h2>Exercise 4</h2>
+
+					<h2>Exercise 3</h2>
 					<p>
 						Implement the empty functions from exercise 3. Using <code><a href="http://php.net/file_get_contents">file_get_contents</a></code> and <code><a href="http://php.net/file_put_contents">file_put_contents</a></code>, make a file-based a storage scheme for your guestbook. 
 						For now, we're going to just write the raw markup to a text file and read it back in. Use the <code>FILE_APPEND</code> flag 
@@ -128,7 +109,7 @@ ob_start();
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="code-container col-md-10" style="padding:1em;">
-								<div class="pretty-code non-editable" id="exercise-4-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/4/solution.php'); ?></div>
+								<div class="pretty-code non-editable" id="exercise-3-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/3/solution.php'); ?></div>
 							</div>
 						</div>
 					</div>
