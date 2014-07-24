@@ -54,7 +54,7 @@
 				</section>
 				<section id="session-4">
 					<h1>
-						Session 4<br>
+						<a href="4">Session 4</a><br>
 						<small>More on forms and PHP. File i/o.</small>
 					</h1>
 					<p>
