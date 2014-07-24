@@ -49,18 +49,18 @@ ob_start();
 					<p>
 						With your own guestbook code, use <code>$_POST</code> to capture the input values and print them in the proper place in your page. <a href="exercises/2/before.php">For example</a>.
 					</p>
-					<div class="answer-container">
+
 						<div class="row">
-							<div class="col-md-2"></div>
-							<div class="col-md-5"><a href="exercises/2/before.php">Before</a></div>
-							<div class="col-md-5"><a href="exercises/2/after.php">After</a></div>
-						</div>
-						<div class="row">
-							<div class="col-md-2"></div>
-							<div class="code-container col-md-5" style="padding:1em;">
+							<div class="col-md-2">
+								<a href="exercises/1/before.php">Before</a>
+							</div>
+							<div class="code-container col-md-10" style="padding:1em;">
 								<div class="pretty-code non-editable" id="exercise-1-before-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/1/before.php'); ?></div>
 							</div>
-							<div class="code-container col-md-5" style="padding:1em;">
+						</div>
+						<div class="row">
+							<div class="col-md-2"><a href="exercises/1/after.php">After</a></div>
+							<div class="code-container col-md-10" style="padding:1em;">
 								<div class="pretty-code non-editable" id="exercise-1-after-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/1/after.php'); ?></div>
 							</div>
 						</div>
