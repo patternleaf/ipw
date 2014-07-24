@@ -76,12 +76,10 @@ ob_start();
 					<p>
 						Below is one possible solution.
 					</p>
-					<div class="answer-container">
-						<div class="row">
-							<div class="col-md-2"></div>
-							<div class="code-container col-md-10" style="padding:1em;">
-								<div class="pretty-code non-editable" id="exercise-2-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/2/solution.php'); ?></div>
-							</div>
+
+					<div class="row">
+						<div class="code-container col-md-12" style="padding:1em;">
+							<div class="pretty-code non-editable" id="exercise-2-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/2/solution.php'); ?></div>
 						</div>
 					</div>
 					
@@ -103,20 +101,17 @@ ob_start();
 					<p>
 						NOTE: You may very likely run into a permissions error when you create a text file. Check your error log!
 					</p>
-					<div class="answer-container">
-						<div class="row">
-							<div class="col-md-2"></div>
-							<div class="col-md-8">
-								<p>
-									You can find this version running <a href="/content/sessions/4/exercises/3/solution.php">here</a>.
-								</p>
-							</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<p>
+								You can find this version running <a href="/content/sessions/4/exercises/3/solution.php">here</a>.
+							</p>
 						</div>
-						<div class="row">
-							<div class="col-md-2"></div>
-							<div class="code-container col-md-10" style="padding:1em;">
-								<div class="pretty-code non-editable" id="exercise-3-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/3/solution.php'); ?></div>
-							</div>
+					</div>
+					<div class="row">
+						<div class="code-container col-md-12" style="padding:1em;">
+							<div class="pretty-code non-editable" id="exercise-3-solution-editor" data-language="php" style="width:100%; height:200px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/3/solution.php'); ?></div>
 						</div>
 					</div>
 					
