@@ -64,7 +64,7 @@
 				<section id="session-5">
 
 					<h1>
-						Session 5<br>
+						<a href="5">Session 5</a><br>
 						<small></small>
 					</h1>
 					<p>
