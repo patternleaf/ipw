@@ -34,7 +34,7 @@ ob_start();
 					<h1>Lecture/In-Class Exercises</h1>
 
 					<p>
-						If you need a working file-based guestbook, you can download <a href="guestbook-starter.zip">this one</a>.
+						If you need a working file-based guestbook, you can download <a href="session-5-guestbook-starter.zip">this one</a>.
 					</p>
 
 					<ul>
