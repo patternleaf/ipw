@@ -33,6 +33,10 @@ ob_start();
 				<section class="section row" id="lecture">
 					<h1>Lecture/In-Class Exercises</h1>
 
+					<p>
+						If you need a working file-based guestbook, you can download <a href="guestbook-starter.zip">this one</a>.
+					</p>
+
 					<ul>
 						<li>Discuss <dfn>santization</dfn> and <dfn>validation</dfn>.</li>
 						<li>Introduce the notion of variable <dfn>scope</dfn>.</li>
