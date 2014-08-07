@@ -73,11 +73,11 @@
 				</section>
 				<section id="session-6">
 					<h1>
-						Session 6<br>
+						<a href="6">Session 6</a><br>
 						<small></small>
 					</h1>
 					<p>
-						So now we've got a respectable data format and we are keeping our data clean of any unseemly presentation concerns. Our guestbook is working. Things are going well. This is the point when you need to ask yourself: ￼￼￼￼￼￼￼￼￼￼￼￼￼“OK, how can things go wrong?” (Actually with experience you'll learn to start asking that question right away.) In this session we'll look at data validation, sanitization, error handling, and user experience. This is arguably the most important session in the course. Most of the <em>effort</em> of programming often seems to come down to handling failure gracefully. Coming to peace with this early on is probably a good career move!
+						So now we've got a respectable data format and we are keeping our data clean of any unseemly presentation concerns. Our guestbook is working. Things are going well. This is the point when you need to ask yourself: “OK, how can things go wrong?” (Actually with experience you'll learn to start asking that question right away.) In this session we'll look at data validation, sanitization, error handling, and user experience. This is arguably the most important session in the course. Most of the <em>effort</em> of programming often seems to come down to handling failure gracefully. Coming to peace with this early on is probably a good career move!
 					</p>
 				</section>
 				<section id="session-7">

@@ -24,22 +24,10 @@ ob_start();
 					</blockquote>
 				</section>
 				
-				<section class="section row">
-					<div class="col-md-8">
-						<h1>Happy Birthday, <a href="http://en.wikipedia.org/wiki/History_of_the_World_Wide_Web">WWW</a>!</h1>
-						<p>
-							25 years ago today, Tim Berners-Lee published a paper proposing a system for "the management of general information about accelerators and experiments" at CERN, the European Organization for Nuclear Research. At the time he called it "the Mesh." A year later he would change the name to "the World Wide Web." <a href="http://www.w3.org/History/1989/proposal.html">Here is the original proposal</a>.
-						</p>
-					</div>
-					<div class="col-md-4">
-						<img src="imgs/cake.png" style="width:100%">
-					</div>
-				</section>
-				
 				<section class="section row" id="review">
 					<h1>Review</h1>
 					<p>
-						Review Flickr API exercises and JSON-based guestbooks.
+						Any further questions about the transition to JSON-based guestbooks.
 					</p>
 				</section>
 				<section class="section row" id="lecture">
@@ -55,20 +43,33 @@ ob_start();
 						<li><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Variable scope</a>.</li>
 						<li>Implement <a href="http://en.wikipedia.org/wiki/Data_sanitization#Preventing_code_injection">sanitization</a>, <a href="http://en.wikipedia.org/wiki/Data_validation">validation</a>, and a nice UX for when <a href="http://en.wikipedia.org/wiki/Error_handling">things go wrong</a> in the guestbook.</li>
 					</ul>
-					<p>
-						Also:
-					</p>
-					<ul>
-						<li>Personal project pitches!</li>
-						<li>Where to next?</li>
-					</ul>
 
+					<h2>Modules/Separation of Concerns/Including Files</h2>
+						
+					<p>
+						Check out <a href="/decks/modules">this deck</a>.
+					</p>
+					<p>
+						Our first job will be to make a guestbook app module. We must agree upon an interface. Here it is:
+					</p>
+					<dl>
+						<dt><code><em>bool</em> guestbookWasSigned(void)</code></dt>
+						<dd>Returns true if the guestbook was signed</dd>
+						
+						<dt><code><em>void</em> addEntryToGuestbook(<strong>entry</strong>)</code></dt>
+						<dd>Stores the passed <code>entry</code> in the datastore.</dd>
+
+						<dt><code><em>void</em> printEntries([<strong>containerTag</strong> = "li"])</code></dt>
+						<dd>Echos the guestbook contents. Each entry will be wrapped in <code>containerTag</code>s if one is passed. Uses <code>&lt;li></code>s by default.</dd>
+							
+					</dl>
+					
 					<p>To fill out with slides/content/exercises: </p>
 					<ul>
 						<li>Including Files</li>
 						<li>Error Handling</li>
-						<li>Sanitization and Validation in PHP</li>
-						<li>Variable Scope</li>
+						<li><a href="/decks/data-sanitization-and-validation-guestbook.pdf">Sanitization and Validation in PHP</a></li>
+						<li><a href="/decks/variable-scope-php.pdf">Variable Scope</a></li>
 						<li>Exceptions</li>
 					</ul>
 					
@@ -76,9 +77,6 @@ ob_start();
 
 				<section class="section row" id="materials">
 					<h1>Materials</h1>
-					<p>
-						Slides will be forthcoming.
-					</p>
 					
 					<h2>Guestbook Progression</h2>
 					
@@ -169,9 +167,6 @@ ob_start();
 					<ol>
 						<li>
 							Finish implementing sanitization, validation, and error handling in your guestbook.
-						</li>
-						<li>
-							Develop a plan for implementing your personal project. Preview date: April 8. Presentation: April 10.
 						</li>
 					</ol>
 				</section>
