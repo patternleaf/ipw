@@ -52,16 +52,15 @@ ob_start();
 					<p>
 						Our first job will be to make a guestbook app module. We must agree upon an interface. Here it is:
 					</p>
-					<dl>
-						<dt><code><em>bool</em> guestbookWasSigned(void)</code></dt>
+					<dl class="interface-definition">
+						<dt><code><span class="return-type">bool</span> guestbookWasSigned(<span  class="argument-name">void</span>)</code></dt>
 						<dd>Returns true if the guestbook was signed</dd>
 						
-						<dt><code><em>void</em> addEntryToGuestbook(<strong>entry</strong>)</code></dt>
+						<dt><code><span class="return-type">void</span> addEntryToGuestbook(<span class="argument-name">entry</span>)</code></dt>
 						<dd>Stores the passed <code>entry</code> in the datastore.</dd>
 
-						<dt><code><em>void</em> printEntries([<strong>containerTag</strong> = "li"])</code></dt>
+						<dt><code><span class="return-type">void</span> printEntries([<span class="argument-name">containerTag</span> = "li"])</code></dt>
 						<dd>Echos the guestbook contents. Each entry will be wrapped in <code>containerTag</code>s if one is passed. Uses <code>&lt;li></code>s by default.</dd>
-							
 					</dl>
 					
 					<p>To fill out with slides/content/exercises: </p>
