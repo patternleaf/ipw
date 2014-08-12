@@ -105,7 +105,10 @@ ob_start();
 					
 					<h3>Guestbook "Module"</h3>
 					<p>
-						<a href="guestbook/json-with-include/index.php">Working Example</a>
+						<a href="guestbook/json-with-include/index.php">Working Example</a>.
+					</p>
+					<p>
+						<a href="guestbook/json-with-include.zip">.zip file for downloading</a>.
 					</p>
 					<div class="row live-example">
 						<p style="padding-left:1em"><code>index.php</code></p>
