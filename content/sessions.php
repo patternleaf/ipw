@@ -91,7 +91,7 @@
 				</section>
 				<section id="session-8">
 					<h1>
-						Session 8<br>
+						<a href="8">Session 8</a><br>
 						<small></small>
 					</h1>
 					<p>
