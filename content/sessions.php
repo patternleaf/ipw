@@ -100,7 +100,7 @@
 				</section>
 				<section id="session-9">
 					<h1>
-						Session 9<br>
+						<a href="9">Session 9</a><br>
 						<small></small>
 					</h1>
 					<p>
