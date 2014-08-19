@@ -36,17 +36,20 @@ ob_start();
 					<div class="row">
 						<div class="col-md-8">
 							<h1>Lecture</h1>
-							<p>We have a couple of advanced topics we can talk about:</p>
+							<p>We have a few advanced topics we can talk about:</p>
 							<ul>
 								<li>RESTful interfaces</li>
 								<li>Pass by reference vs pass by value.</li>
+								<li>WordPress.</li>
 							</ul>
 							<p>
-								Slides, etc, forthcoming!
+								Decks: 
 							</p>
-						</div>
-						<div class="col-md-4">
-
+							<ul>
+								<li><a href="/decks/wordpress.pdf">Wordpress</a></li>
+								<li><a href="/decks/pass-ref-value.pdf">Pass by Reference vs Pass by Value</a></li>
+								<li>(RESTful coming soon!)</li>
+							</ul>
 						</div>
 					</div>
 
