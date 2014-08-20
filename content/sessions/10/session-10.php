@@ -27,13 +27,29 @@ ob_start();
 
 				<section class="section row" id="review">
 					<div class="col-md-8">
-						<h1>MySQL Guestbook</h1>
+						<h1>Review</h1>
 						<ul>
-							<li><a href="exercises/guestbook-mysql/from-class-6.zip">Guestbook from class 6</a></li>
-							<li><a href="exercises/guestbook-mysql/finished.zip">A finished MySQL guestbook</a>.</li>
+							<li>Wordpress</li>
 						</ul>
 					</div>
 				</section>
+
+				<section class="section row" id="advanced-topics">
+					<div class="col-md-8">
+						<h1>Advanced Topics</h1>
+						<p>
+							Some possible topics:
+						</p>
+						<ul>
+							<li>More WordPress</li>
+							<li>Pass by reference vs pass by value</li>
+							<li>Cookies and sessions</li>
+							<li>Add an API to our guestbook</li>
+							<li>Questions about anything?</li>
+						</ul>
+					</div>
+				</section>
+
 
 			</div>
 		</div>
