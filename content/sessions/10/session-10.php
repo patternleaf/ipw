@@ -26,12 +26,10 @@ ob_start();
 				</section>
 
 				<section class="section row" id="review">
-					<div class="col-md-8">
-						<h1>Review</h1>
-						<ul>
-							<li>Wordpress</li>
-						</ul>
-					</div>
+					<h1>Review</h1>
+					<ul>
+						<li>Wordpress</li>
+					</ul>
 				</section>
 
 				<section class="section row" id="lecture">
@@ -59,8 +57,7 @@ ob_start();
 							<div class="pretty-code non-editable" id="starter-include-editor" data-language="php" style="width:100%; height:300px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/guestbook-mysql-starter/guestbook-app.php'); ?></div>
 						</div>
 					</div>
-					
-					<p>
+
 				</section>
 
 				<section class="section row" id="advanced-topics">
@@ -74,8 +71,8 @@ ob_start();
 							<li>Pass by reference vs pass by value</li>
 							<li>Cookies and sessions</li>
 							<li>Add an API to our guestbook</li>
-							<li>Questions about anything?</li>
 							<li>Pagination using MySQL</li>
+							<li><strong>Questions about anything?</strong></li>
 						</ul>
 					</div>
 				</section>
