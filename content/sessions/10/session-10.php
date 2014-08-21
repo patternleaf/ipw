@@ -34,6 +34,35 @@ ob_start();
 					</div>
 				</section>
 
+				<section class="section row" id="lecture">
+					<h1>Lecture/In-Class Exercises</h1>
+					
+					<h3>Guestbook MySQL Starter</h3>
+					<p>
+						Let's review this implementation and implement <code>printEntries</code>.
+					</p>
+					<p>
+						<a href="exercises/guestbook-mysql-starter/index.php">Working Example</a>.
+					</p>
+					<p>
+						<a href="exercises/guestbook-mysql-starter.zip">.zip file for downloading</a>.
+					</p>
+					<div class="row live-example">
+						<p style="padding-left:1em"><code>index.php</code></p>
+						<div class="code-container col-md-10" style="padding-right:1em;">
+							<div class="pretty-code non-editable" id="starter-index-editor" data-language="php" style="width:100%; height:300px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/guestbook-mysql-starter/index.php'); ?></div>
+						</div>
+					</div>
+					<div class="row live-example">
+						<p style="padding-left:1em"><code>guestbook-app.php</code></p>
+						<div class="code-container col-md-10" style="padding-right:1em;">
+							<div class="pretty-code non-editable" id="starter-include-editor" data-language="php" style="width:100%; height:300px;"><?php echo app()->escapedFileContents(__DIR__.'/exercises/guestbook-mysql-starter/guestbook-app.php'); ?></div>
+						</div>
+					</div>
+					
+					<p>
+				</section>
+
 				<section class="section row" id="advanced-topics">
 					<div class="col-md-8">
 						<h1>Advanced Topics</h1>
@@ -46,6 +75,7 @@ ob_start();
 							<li>Cookies and sessions</li>
 							<li>Add an API to our guestbook</li>
 							<li>Questions about anything?</li>
+							<li>Pagination using MySQL</li>
 						</ul>
 					</div>
 				</section>
